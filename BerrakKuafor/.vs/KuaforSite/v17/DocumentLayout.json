@@ -1,122 +1,12 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{84F4FE04-9A76-44BE-9F53-674F77E67295}|KuaforSite\\KuaforSite.csproj|c:\\users\\me_ct\\onedrive\\masa\u00FCst\u00FC\\oktay\\commit 1 - genel yap\u0131, db connection, repos\\kuaforsite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F4FE04-9A76-44BE-9F53-674F77E67295}|KuaforSite\\KuaforSite.csproj|solutionrelative:kuaforsite\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F4FE04-9A76-44BE-9F53-674F77E67295}|KuaforSite\\KuaforSite.csproj|c:\\users\\me_ct\\onedrive\\masa\u00FCst\u00FC\\oktay\\commit 1 - genel yap\u0131, db connection, repos\\kuaforsite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{84F4FE04-9A76-44BE-9F53-674F77E67295}|KuaforSite\\KuaforSite.csproj|solutionrelative:kuaforsite\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F4FE04-9A76-44BE-9F53-674F77E67295}|KuaforSite\\KuaforSite.csproj|c:\\users\\me_ct\\onedrive\\masa\u00FCst\u00FC\\oktay\\commit 1 - genel yap\u0131, db connection, repos\\kuaforsite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F4FE04-9A76-44BE-9F53-674F77E67295}|KuaforSite\\KuaforSite.csproj|solutionrelative:kuaforsite\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{84F4FE04-9A76-44BE-9F53-674F77E67295}|KuaforSite\\KuaforSite.csproj|c:\\users\\me_ct\\onedrive\\masa\u00FCst\u00FC\\oktay\\commit 1 - genel yap\u0131, db connection, repos\\kuaforsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{84F4FE04-9A76-44BE-9F53-674F77E67295}|KuaforSite\\KuaforSite.csproj|solutionrelative:kuaforsite\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671DE905-BDB4-464A-B5B2-C2418DA2CBEA}|EntityLayer\\EntityLayer.csproj|c:\\users\\me_ct\\onedrive\\masa\u00FCst\u00FC\\oktay\\commit 1 - genel yap\u0131, db connection, repos\\entitylayer\\concretes\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671DE905-BDB4-464A-B5B2-C2418DA2CBEA}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\concretes\\appuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{671DE905-BDB4-464A-B5B2-C2418DA2CBEA}|EntityLayer\\EntityLayer.csproj|c:\\users\\me_ct\\onedrive\\masa\u00FCst\u00FC\\oktay\\commit 1 - genel yap\u0131, db connection, repos\\entitylayer\\concretes\\approle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{671DE905-BDB4-464A-B5B2-C2418DA2CBEA}|EntityLayer\\EntityLayer.csproj|solutionrelative:entitylayer\\concretes\\approle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 2 - Authentication i\u015Flemleri\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\KuaforSite\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "KuaforSite\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\KuaforSite\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "KuaforSite\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T16:12:09.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\KuaforSite\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "KuaforSite\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\KuaforSite\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "KuaforSite\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-28T16:12:06.096Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\KuaforSite\\Program.cs",
-              "RelativeDocumentMoniker": "KuaforSite\\Program.cs",
-              "ToolTip": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\KuaforSite\\Program.cs",
-              "RelativeToolTip": "KuaforSite\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T16:11:44.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\KuaforSite\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "KuaforSite\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\KuaforSite\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "KuaforSite\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T16:11:41.25Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppUser.cs",
-              "DocumentMoniker": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\EntityLayer\\Concretes\\AppUser.cs",
-              "RelativeDocumentMoniker": "EntityLayer\\Concretes\\AppUser.cs",
-              "ToolTip": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\EntityLayer\\Concretes\\AppUser.cs",
-              "RelativeToolTip": "EntityLayer\\Concretes\\AppUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T16:11:32.48Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppRole.cs",
-              "DocumentMoniker": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\EntityLayer\\Concretes\\AppRole.cs",
-              "RelativeDocumentMoniker": "EntityLayer\\Concretes\\AppRole.cs",
-              "ToolTip": "C:\\Users\\me_ct\\OneDrive\\Masa\u00FCst\u00FC\\OKTAY\\Commit 1 - Genel yap\u0131, db connection, repos\\EntityLayer\\Concretes\\AppRole.cs",
-              "RelativeToolTip": "EntityLayer\\Concretes\\AppRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T16:11:31.191Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace EntityLayer.Concretes
 {
-    public class AppUser:IdentityUser
+    public class AppUser : IdentityUser
     {
+        public string NameSurname { get; set; }
+        public string? ImageUrl { get; set; }
     }
 }

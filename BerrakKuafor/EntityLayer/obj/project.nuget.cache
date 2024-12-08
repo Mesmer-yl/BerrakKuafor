@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bg7QKsVXCyM=",
+  "dgSpecHash": "j86PEzaGmRw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 1 - Genel yapı, db connection, repos\\EntityLayer\\EntityLayer.csproj",
+  "projectFilePath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 2 - Authentication işlemleri\\EntityLayer\\EntityLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\me_ct\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\8.0.10\\microsoft.aspnetcore.cryptography.internal.8.0.10.nupkg.sha512",
     "C:\\Users\\me_ct\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\8.0.10\\microsoft.aspnetcore.cryptography.keyderivation.8.0.10.nupkg.sha512",

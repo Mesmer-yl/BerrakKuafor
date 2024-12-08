@@ -1,7 +1,9 @@
 using DataLayer.Context;
+using DataLayer.Repos;
 using EntityLayer.Concretes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,10 +21,18 @@ builder.Services.AddIdentity<AppUser, AppRole>(opt =>
     opt.Password.RequireLowercase = false;
     opt.Password.RequireUppercase = false;
     opt.SignIn.RequireConfirmedAccount = false;
+    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(10);
+    opt.Lockout.MaxFailedAccessAttempts = 4;
 })
     .AddRoleManager<RoleManager<AppRole>>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
+
+#region DI Scope OP
+
+
+
+#endregion
 
 var app = builder.Build();
 

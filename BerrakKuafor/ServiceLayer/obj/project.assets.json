@@ -2966,11 +2966,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 1 - Genel yapı, db connection, repos\\ServiceLayer\\ServiceLayer.csproj",
+      "projectUniqueName": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 2 - Authentication işlemleri\\ServiceLayer\\ServiceLayer.csproj",
       "projectName": "ServiceLayer",
-      "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 1 - Genel yapı, db connection, repos\\ServiceLayer\\ServiceLayer.csproj",
+      "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 2 - Authentication işlemleri\\ServiceLayer\\ServiceLayer.csproj",
       "packagesPath": "C:\\Users\\me_ct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 1 - Genel yapı, db connection, repos\\ServiceLayer\\obj\\",
+      "outputPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 2 - Authentication işlemleri\\ServiceLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2991,8 +2991,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 1 - Genel yapı, db connection, repos\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 1 - Genel yapı, db connection, repos\\DataLayer\\DataLayer.csproj"
+            "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 2 - Authentication işlemleri\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 2 - Authentication işlemleri\\DataLayer\\DataLayer.csproj"
             }
           }
         }

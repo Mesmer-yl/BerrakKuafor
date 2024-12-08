@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hH14cwH2hgY=",
+  "dgSpecHash": "crprFNq6kE4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 1 - Genel yapı, db connection, repos\\DataLayer\\DataLayer.csproj",
+  "projectFilePath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 2 - Authentication işlemleri\\DataLayer\\DataLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\me_ct\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\me_ct\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

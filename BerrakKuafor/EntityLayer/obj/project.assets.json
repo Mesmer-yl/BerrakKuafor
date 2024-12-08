@@ -565,11 +565,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 1 - Genel yapı, db connection, repos\\EntityLayer\\EntityLayer.csproj",
+      "projectUniqueName": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 2 - Authentication işlemleri\\EntityLayer\\EntityLayer.csproj",
       "projectName": "EntityLayer",
-      "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 1 - Genel yapı, db connection, repos\\EntityLayer\\EntityLayer.csproj",
+      "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 2 - Authentication işlemleri\\EntityLayer\\EntityLayer.csproj",
       "packagesPath": "C:\\Users\\me_ct\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 1 - Genel yapı, db connection, repos\\EntityLayer\\obj\\",
+      "outputPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\OKTAY\\Commit 2 - Authentication işlemleri\\EntityLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
