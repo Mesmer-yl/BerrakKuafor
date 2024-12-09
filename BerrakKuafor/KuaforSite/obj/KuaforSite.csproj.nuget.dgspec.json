@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\KuaforSite\\KuaforSite.csproj": {}
+    "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\KuaforSite\\KuaforSite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\DataLayer\\DataLayer.csproj",
+        "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -89,14 +89,14 @@
         }
       }
     },
-    "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj",
+        "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\EntityLayer\\EntityLayer.csproj",
         "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\obj\\",
+        "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -156,14 +156,14 @@
         }
       }
     },
-    "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\KuaforSite\\KuaforSite.csproj": {
+    "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\KuaforSite\\KuaforSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\KuaforSite\\KuaforSite.csproj",
+        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\KuaforSite\\KuaforSite.csproj",
         "projectName": "KuaforSite",
-        "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\KuaforSite\\KuaforSite.csproj",
+        "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\KuaforSite\\KuaforSite.csproj",
         "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\KuaforSite\\obj\\",
+        "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\KuaforSite\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -181,8 +181,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\ServiceLayer\\ServiceLayer.csproj": {
-                "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\ServiceLayer\\ServiceLayer.csproj"
+              "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\ServiceLayer\\ServiceLayer.csproj": {
+                "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\ServiceLayer\\ServiceLayer.csproj"
               }
             }
           }
@@ -236,14 +236,14 @@
         }
       }
     },
-    "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\ServiceLayer\\ServiceLayer.csproj": {
+    "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\ServiceLayer\\ServiceLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\ServiceLayer\\ServiceLayer.csproj",
+        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\ServiceLayer\\ServiceLayer.csproj",
         "projectName": "ServiceLayer",
-        "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\ServiceLayer\\ServiceLayer.csproj",
+        "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\ServiceLayer\\ServiceLayer.csproj",
         "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\ServiceLayer\\obj\\",
+        "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\ServiceLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -261,8 +261,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\DataLayer\\DataLayer.csproj"
+              "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\DataLayer\\DataLayer.csproj"
               }
             }
           }

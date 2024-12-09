@@ -1,0 +1,186 @@
+﻿/*
+    DEMO STYLE
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fafafa;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1.7em;
+    color: rgb(10,10,10);
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    background: rgb(35,35,35);
+    padding: 15px 10px;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.text-color {
+    color: rgb(200,200,200) !important;
+    border-bottom:1px solid rgb(200,200,200) !important;
+    font-size:.8em;
+}
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: rgb(50,50,50);
+    color: rgb(150,150,150);
+    transition: all 0.3s;
+}
+
+    #sidebar.active {
+        margin-left: -250px;
+    }
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: rgb(25,25,25);
+    }
+
+    #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid #47748b;
+    }
+
+    #sidebar ul p {
+        color: rgb(200,200,200);
+        padding: 10px;
+        font-size:.8em;
+    }
+
+    #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+        color:rgb(200,200,200);
+    }
+
+        #sidebar ul li a:hover {
+            color: rgb(150,150,150);
+            background: rgb(25,25,25);
+        }
+
+    #sidebar ul li.active > a,
+    a[aria-expanded="true"] {
+        color: rgb(200,200,200);
+        background: rgb(35,35,35);
+    }
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+.dropdown-toggle{
+    position:relative;
+}
+.dropdown-toggle::after {
+    font-family: "Font Awesome 5 Free"; /* İkon setine göre değiştirin */
+    font-weight: 900;
+    position: absolute; /* Absolute konumlandırma */
+    right: 10px; /* Sağdan boşluk */
+    top: 50%; /* Dikey ortalama */
+    transform: translateY(-50%); /* Ortalamayı düzelt */
+    pointer-events: none; /* Tıklama olaylarını engelle */
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: rgb(40,40,40);
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+    ul.CTAs a {
+        text-align: center;
+        font-size: 0.9em !important;
+        display: block;
+        border-radius: 5px;
+        margin-bottom: 5px;
+    }
+
+a.download {
+    background: #fff;
+    color: rgb(red,25,25);
+}
+
+a.article,
+a.article:hover {
+    background: #6d7fcc !important;
+    color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    background:rgb(150,150,150);
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+.content-main{
+    margin:0 1em;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+        #sidebar.active {
+            margin-left: 0;
+        }
+
+    #sidebarCollapse span {
+        display: none;
+    }
+}

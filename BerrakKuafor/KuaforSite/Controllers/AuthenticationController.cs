@@ -83,7 +83,6 @@ namespace KuaforSite.Controllers
                 TempData["SuccessRegister"] = "Kayıt işleminiz başarılı, giriş yapınız.";
                 return RedirectToAction(nameof(SignIn), "Authentication");
             }
-
             ModelState.AddModelErrorList(identityResult.Errors.Select(x => x.Description).ToList());
             return View();
         }

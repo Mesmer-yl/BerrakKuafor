@@ -564,11 +564,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj",
+      "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\EntityLayer\\EntityLayer.csproj",
       "projectName": "EntityLayer",
-      "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj",
+      "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\EntityLayer\\EntityLayer.csproj",
       "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\obj\\",
+      "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 3 - Panel Area, Panel Layout\\EntityLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",

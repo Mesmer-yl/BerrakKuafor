@@ -17,47 +17,67 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KuaforSite
 build_property.RootNamespace = KuaforSite
-build_property.ProjectDir = C:\Users\oktay\Desktop\WebProgramlamaOdevi\BerrakKuafor\BerrakKuafor\KuaforSite\
+build_property.ProjectDir = C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 3 - Panel Area, Panel Layout\KuaforSite\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\oktay\Desktop\WebProgramlamaOdevi\BerrakKuafor\BerrakKuafor\KuaforSite
+build_property.MSBuildProjectDirectory = C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 3 - Panel Area, Panel Layout\KuaforSite
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/oktay/Desktop/WebProgramlamaOdevi/BerrakKuafor/BerrakKuafor/KuaforSite/Views/Authentication/SignIn.cshtml]
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Areas/Panel/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Areas/Panel/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Areas/Panel/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Areas/Panel/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Views/Authentication/SignIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cU2lnbkluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/WebProgramlamaOdevi/BerrakKuafor/BerrakKuafor/KuaforSite/Views/Authentication/SignUp.cshtml]
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Views/Authentication/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cU2lnblVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/WebProgramlamaOdevi/BerrakKuafor/BerrakKuafor/KuaforSite/Views/Home/Index.cshtml]
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/WebProgramlamaOdevi/BerrakKuafor/BerrakKuafor/KuaforSite/Views/Home/Privacy.cshtml]
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/WebProgramlamaOdevi/BerrakKuafor/BerrakKuafor/KuaforSite/Views/Shared/Error.cshtml]
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/WebProgramlamaOdevi/BerrakKuafor/BerrakKuafor/KuaforSite/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/WebProgramlamaOdevi/BerrakKuafor/BerrakKuafor/KuaforSite/Views/_ViewImports.cshtml]
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/WebProgramlamaOdevi/BerrakKuafor/BerrakKuafor/KuaforSite/Views/_ViewStart.cshtml]
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/WebProgramlamaOdevi/BerrakKuafor/BerrakKuafor/KuaforSite/Views/Shared/_Layout.cshtml]
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Areas/Panel/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-yuqmpbtzb2
+
+[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 3 - Panel Area\, Panel Layout/KuaforSite/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-doshlnkez1
