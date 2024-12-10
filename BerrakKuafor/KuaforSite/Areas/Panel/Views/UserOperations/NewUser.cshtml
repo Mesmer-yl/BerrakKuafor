@@ -1,0 +1,50 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "NewUser";
+    Layout = "~/Areas/Panel/Views/Shared/_Layout.cshtml";
+}
+<h5>Kullanıcı İşlemleri > <strong class="text-decoration-underline">Yeni Kullanıcı Oluştur</strong></h5>
+<span class="page-title-line"></span>
+
+<div class="panel-card">
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert">
+    </div>
+    <form class="form" method="post" asp-area="Panel" asp-controller="UserOperations" asp-action="NewUser">
+
+        <div class="form-group">
+            <label class="form-label" asp-for="NameSurname" for="NameSurname"></label>
+            <input class="form-control" asp-for="NameSurname" placeholder="İsminizi ve soyisminizi..." />
+            <span asp-validation-for="NameSurname" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="Email" for="Email"></label>
+            <input class="form-control" type="email" asp-for="Email" placeholder="Email adresiniz..." />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="PhoneNumber" for="PhoneNumber"></label>
+            <input class="form-control" asp-for="PhoneNumber" placeholder="Telefon numaranız..." />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="Password" for="Password"></label>
+            <input class="form-control" asp-for="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="ConfirmPassword" for="ConfirmPassword"></label>
+            <input class="form-control" asp-for="ConfirmPassword" />
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+
+        <div class="form-group  border-0">
+            <button type="submit" class="form-control btn purple-soft">Oluştur</button>
+        </div>
+
+    </form>
+</div>
+

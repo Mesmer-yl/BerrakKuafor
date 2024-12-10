@@ -10,11 +10,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Database DefaultConnection
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// Session
 builder.Services.AddSession();
 
+// Identity
 builder.Services.AddIdentity<AppUser, AppRole>(opt =>
 {
     opt.Password.RequireNonAlphanumeric = false;
@@ -36,6 +39,7 @@ builder.Services.AddIdentity<AppUser, AppRole>(opt =>
 
 var app = builder.Build();
 
+// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");

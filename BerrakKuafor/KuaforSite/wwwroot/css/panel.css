@@ -164,9 +164,70 @@ a.article:hover {
     transition: all 0.3s;
 }
 .content-main{
-    margin:0 1em;
+    margin:0;
 }
-
+.panel-card {
+    background: rgb(50,50,50);
+    padding: 1em;
+    border-radius: 15px;
+    margin: .5em;
+    color: rgb(200,200,200);
+}
+.page-title-line {
+    background: rgb(35,35,35);
+    display: block;
+    width: 100%;
+    height: .1rem;
+    margin: 1em 0;
+}
+.card-title-line {
+    background: rgb(135,135,135);
+    display: block;
+    width: 100%;
+    height: .1rem;
+    margin: .5em 0 1em 0;
+}
+.card-title{
+    color:rgb(200,200,200);
+}
+.panel-card table {
+    color: rgb(210,210,210);
+    font-size: .85em;
+    letter-spacing: .3px;
+}
+.panel-card table thead {
+    font-weight:500;
+    color:rgb(150,150,150);
+    letter-spacing:.5px;
+    background:rgb(35,35,35);
+}
+.panel-card form label{
+    font-size:0.9em;
+}
+.panel-card form input, .panel-card form select, .panel-card form textarea{
+    background: rgb(190,190,190);
+    font-weight:500;
+}
+.panel-card form .form-group {
+    margin: 1em 0;
+    border-bottom: 1px solid rgb(100,100,100);
+    border-left: 1px solid rgb(70,70,70);
+    border-right: 1px solid rgb(70,70,70);
+    padding: .5em;
+}
+.panel-card form .form-group button{
+    border:none;
+}
+.purple-soft {
+    background: #6d7fcc !important;
+    color: #fff !important;
+    text-align: center;
+    font-size: 0.9em !important;
+    font-weight: 600;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */

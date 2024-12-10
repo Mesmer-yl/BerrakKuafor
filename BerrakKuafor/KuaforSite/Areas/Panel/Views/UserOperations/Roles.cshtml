@@ -1,0 +1,59 @@
+﻿@model RoleAddVM
+@{
+    ViewData["Title"] = "Roles";
+    Layout = "~/Areas/Panel/Views/Shared/_Layout.cshtml";
+    var roleList = ViewBag.Roles as List<RolesVM>;
+}
+
+<h5>Kullanıcı İşlemleri > <strong class="text-decoration-underline">Rol İşlemleri</strong></h5>
+<span class="page-title-line"></span>
+<div class="row">
+    <div class="col-lg-4 col-md-12 panel-card">
+        <h6 class="card-title">Mevcut Roller</h6>
+        <span class="card-title-line"></span>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>
+                        Rol İsmi
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var role in roleList)
+                {
+                    <tr>
+                        <td>
+                            @role.Name
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="col-lg-3 col-md-12 panel-card">
+        <h6 class="card-title">Yeni Rol</h6>
+        <span class="card-title-line"></span>
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert">
+        </div>
+        <form method="post" asp-area="Panel" asp-controller="UserOperations" asp-action="Roles">
+            @if (TempData["RoleAddMessage"] != null)
+            {
+                <div class="alert alert-info" role="alert">
+                    @TempData["RoleAddMessage"]
+                </div>
+            }
+            <div class="form-group">
+                <label asp-for="Name" for="Name" class="form-label"></label>
+                <input class="form-control" type="text" asp-for="Name" placeholder="Yeni rol ismi giriniz" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group  border-0">
+                <button type="submit" class="btn purple-soft form-control">Oluştur</button>
+            </div>
+        </form>
+    </div>
+    
+
+    
+</div>
