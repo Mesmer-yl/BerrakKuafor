@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 4 - Panel Kullanıcı İşlemleri\\EntityLayer\\EntityLayer.csproj": {}
+    "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 4 - Panel Kullanıcı İşlemleri\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 4 - Panel Kullanıcı İşlemleri\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 4 - Panel Kullanıcı İşlemleri\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\Esmer Bilgi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 4 - Panel Kullanıcı İşlemleri\\EntityLayer\\obj\\",
+        "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Esmer Bilgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
