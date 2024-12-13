@@ -1,0 +1,66 @@
+﻿@model HairdresserUpdateVM
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Panel/Views/Shared/_Layout.cshtml";
+}
+
+
+<h5>Kuaför Yönetimi > <strong class="text-decoration-underline">Kuaför Bilgileri</strong></h5>
+
+<span class="page-title-line"></span>
+<div class="panel-card">
+
+    @if (TempData["UpdHairdresserMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["UpdHairdresserMessage"]
+        </div>
+    }
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert">
+    </div>
+    <form method="post" asp-area="Panel" asp-controller="Management" asp-action="Index">
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <label class="form-label" asp-for="Name" for="Name"></label>
+            <input class="form-control" asp-for="Name" placeholder="Kuaför ismini giriniz..." />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="PhoneNumber" for="PhoneNumber"></label>
+            <input class="form-control" asp-for="PhoneNumber" placeholder="Telefon numaranız..." />
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="Address" for="Address"></label>
+            <textarea class="form-control" asp-for="Address" placeholder="Kuaför adresiniz..." rows="3"></textarea>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="Field" for="Field"></label>
+            <input type="radio" asp-for="Field" value="Erkek" />Erkek
+            <input type="radio" asp-for="Field" value="Kadın" />Kadın
+            <span asp-validation-for="Field" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="OpenTime" for="OpenTime"></label>
+            <input class="form-control" type="time" asp-for="OpenTime" />
+            <span asp-validation-for="OpenTime" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="CloseTime" for="CloseTime"></label>
+            <input class="form-control" type="time" asp-for="CloseTime" />
+            <span asp-validation-for="CloseTime" class="text-danger"></span>
+        </div>
+
+
+        <div class="form-group border-0">
+            <button class="btn purple-soft form-control" type="submit">Güncelle</button>
+        </div>
+    </form>
+
+</div>

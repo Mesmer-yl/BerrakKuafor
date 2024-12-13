@@ -26,19 +26,16 @@ namespace KuaforSite.Controllers
         [HttpPost]
         public async Task<IActionResult> SignIn(LoginVM _loginVM)
         {
-            //Modelin doğrulanması
             if (!ModelState.IsValid)
             {
                 return View();
             }
-            //Kullanıcı kontrolü
             var hasUser = await _userManager.FindByEmailAsync(_loginVM.Email);
             if (hasUser == null)
             {
                 ModelState.AddModelError(string.Empty, "Email ya da şifre yanlış!");
                 return View();
             }
-            //Şifre kontrolü
             var result = await _signInManager.PasswordSignInAsync(hasUser.UserName!, _loginVM.Password, isPersistent: true, true);
             if (result.Succeeded)
             {
@@ -49,7 +46,6 @@ namespace KuaforSite.Controllers
                 ModelState.AddModelError(string.Empty, $"Kalan deneme hakkınız: {await _userManager.GetAccessFailedCountAsync(hasUser)}/4");
             }
 
-            //Hesabın kilitlenmesi
             if (result.IsLockedOut)
             {
                 var lockoutEndDate = await _userManager.GetLockoutEndDateAsync(hasUser);
@@ -70,12 +66,10 @@ namespace KuaforSite.Controllers
         [HttpPost]
         public async Task<IActionResult> SignUp(RegisterVM _registerVM)
         {
-            //Modelin doğrulanması
             if (!ModelState.IsValid)
             {
                 return View();
             }
-            //Hesap oluşturma
             var newUser = new AppUser()
             {
                 UserName = _registerVM.Email,
@@ -85,7 +79,6 @@ namespace KuaforSite.Controllers
             };
             var identityResult = await _userManager.CreateAsync(newUser, _registerVM.ConfirmPassword);
 
-            //Oluşturma başarılıysa
             if (identityResult.Succeeded)
             {
                 await _userManager.AddToRoleAsync(newUser, "Member");
@@ -93,13 +86,11 @@ namespace KuaforSite.Controllers
                 return RedirectToAction(nameof(SignIn), "Authentication");
             }
 
-            //Hata mesajları
             ModelState.AddModelErrorList(identityResult.Errors.Select(x => x.Description).ToList());
             return View();
         }
         public async Task<IActionResult> LogOut()
         {
-            // Kullanıcının çıkış yapması
             await _signInManager.SignOutAsync();
             return RedirectToAction(nameof(AuthenticationController.SignIn), "Authentication");
         }

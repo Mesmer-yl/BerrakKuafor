@@ -1,0 +1,193 @@
+﻿@model List<EmployeeServiceUpdateVM>
+@{
+    ViewData["Title"] = "UpdateEmployee";
+    Layout = "~/Areas/Panel/Views/Shared/_Layout.cshtml";
+    var serviceList = ViewBag.Services as List<ServiceVM>;
+}
+
+<h5>Kuaför Yönetimi > Çalışan İşlemleri > <strong class="text-decoration-underline">Çalışan Hizmetleri</strong></h5>
+<span class="page-title-line"></span>
+<input id="employeeId" type="hidden" value="@ViewBag.EmployeeId" />
+<div class="panel-card">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Hizmet
+                </th>
+                <th>
+                    Ücret
+                </th>
+                <th>
+                    Süre
+                </th>
+                <th>
+                    Uzmanlık
+                </th>
+                <th>
+                    
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var service in serviceList)
+            {
+                var matchedEmployeeService = Model.FirstOrDefault(employeeService => employeeService.ServiceId == service.Id);
+                if (matchedEmployeeService != null)
+                {
+                    <tr>
+                        <td>
+                            @service.Name
+                            <input id="employeeServiceId#@service.Id" type="hidden" value="@matchedEmployeeService.Id" />
+                        </td>
+                        <td>
+                            <input id="money#@service.Id" type="number" placeholder="Ucret" value="@matchedEmployeeService.Money" />
+                        </td>
+                        <td>
+                            <input id="duration#@service.Id" type="time" placeholder="Süre" value="@matchedEmployeeService.Duration" />
+                        </td>
+                        <td>
+                            <input id="isPro#@service.Id" name="isPro#@service.Id" type="radio" value="true" @(matchedEmployeeService.IsPro ? "checked" : "") />E
+                            <input id="isProFalse#@service.Id" name="isPro#@service.Id" type="radio" value="false" @(matchedEmployeeService.IsPro == false ? "checked" : "") />H
+                        </td>
+
+                        <td>
+                            <button type="button" class="btn purple-soft updEmpSerBtn" data-id="@service.Id">Güncelle</button>
+                        </td>
+                    </tr>
+                }
+                else
+                {
+                    <tr>
+                        <td>
+                            @service.Name
+                        </td>
+                        <td>
+                            <input id="money#@service.Id" type="number" placeholder="Ucret" />
+                        </td>
+                        <td>
+                            <input id="duration#@service.Id" type="time" placeholder="Süre" />
+                        </td>
+                        <td>
+                            <input id="isPro#@service.Id" name="isPro#@service.Id" type="radio" value="true" />E
+                        </td>
+                        <td>
+                            <button type="button" class="btn purple-soft addEmpSerBtn" data-id="@service.Id">Ekle</button>
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            function setEventListeners() {
+                var isProcessing = false;
+                $('.addEmpSerBtn').on('click', function () {
+                    if (isProcessing) return; 
+
+                    isProcessing = true; 
+                    var serviceId = $(this).data('id');
+                    var inputMoney = "money#" + serviceId;
+                    var inputDuration = "duration#" + serviceId;
+                    var inputIsPro = "isPro#" + serviceId;
+                    var moneyInput = document.getElementById(inputMoney);
+                    var durationInput = document.getElementById(inputDuration);
+                    var isProInput = document.querySelector('input[name="' + inputIsPro + '"]:checked');
+                    var money = parseInt(moneyInput.value);
+                    var duration = durationInput.value;
+                    var durationParts = duration.split(':');  // ["HH", "mm"]
+                    var hours = parseInt(durationParts[0], 10);
+                    var minutes = parseInt(durationParts[1], 10);
+
+                    var formattedDuration = hours * 60 + minutes; 
+                    var isPro = isProInput ? true : false;
+                    var employeeId = parseInt(document.getElementById("employeeId").value);
+                    serviceId = parseInt(serviceId);
+                    let addEmployeeServiceVM = {
+                        EmployeeId: employeeId,
+                        ServiceId: serviceId,
+                        Money: money,
+                        Duration: formattedDuration,
+                        IsPro: isPro
+                    }
+                    var confirmed = confirm(addEmployeeServiceVM + " İlgili çalışanın ilgili hizmetine ait veriler güncellensin mi?");
+                    if (confirmed) {
+                        $.ajax({
+                            url: "/Panel/Management/AddEmployeeService/",
+                            type: "POST",
+                            data: JSON.stringify(addEmployeeServiceVM),
+                            contentType: "application/json; charset=utf-8", 
+                            success: function (response) {
+                                alert(response.saveText);
+                                isProcessing = false;
+                                window.location.replace("/Panel/Management/UpdateEmployee?employeeId=" + employeeId);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                console.error("AJAX Error:", textStatus, errorThrown);
+                                alert("İşleminiz gerçekleşmedi: " + jqXHR.responseText);
+                                isProcessing = false;
+                            }
+                        });
+                    }
+
+                });
+                $('.updEmpSerBtn').on('click', function () {
+                    var serviceId = $(this).data('id');
+                    var inputMoney = "money#" + serviceId;
+                    var inputDuration = "duration#" + serviceId;
+                    var inputIsPro = "isPro#" + serviceId;
+                    var inputIsProFalse = "isProFalse#" + serviceId;
+                    var moneyInput = document.getElementById(inputMoney);
+                    var durationInput = document.getElementById(inputDuration);
+                    var isProInput = document.querySelector('input[name="' + inputIsPro + '"]:checked');
+                    var money = parseInt(moneyInput.value);
+                    var duration = durationInput.value;
+                    var durationParts = duration.split(':');  // ["HH", "mm"]
+                    var hours = parseInt(durationParts[0], 10);
+                    var minutes = parseInt(durationParts[1], 10);
+                    var formattedDuration = hours * 60 + minutes;
+                    var isPro = isProInput ? isProInput.value === 'true' : false;
+                    var employeeId = document.getElementById("employeeId").value;
+
+                    var inputEmployeeServiceId = "employeeServiceId#" + serviceId;
+                    var employeeServiceIdInput = document.getElementById(inputEmployeeServiceId);
+                    var employeeServiceId = employeeServiceIdInput.value;
+
+                    let updEmployeeServiceVM = {
+                        Id: employeeServiceId,
+                        EmployeeId: employeeId,
+                        ServiceId: serviceId,
+                        Money: money,
+                        Duration: formattedDuration,
+                        IsPro: isPro
+                    }
+                    var confirmed = confirm("İlgili çalışanın ilgili hizmetine ait veriler güncellensin mi?");
+                    if (confirmed) {
+                        $.ajax({
+                            url: "/Panel/Management/UpdateEmployeeService/",
+                            type: "POST",
+                            data: JSON.stringify(updEmployeeServiceVM), 
+                            contentType: "application/json; charset=utf-8", 
+                            success: function (response) {
+                                alert(response.saveText);
+                                window.location.replace("/Panel/Management/UpdateEmployee?employeeId=" + employeeId);
+                            },
+                            error: function (jqXHR, textStatus, errorThrown) {
+                                console.error("AJAX Error:", textStatus, errorThrown);
+                                alert("İşleminiz gerçekleşmedi: " + jqXHR.responseText);
+                            }
+                        });
+                    }
+
+                });
+            }
+            setEventListeners();
+
+        });
+    </script>
+}

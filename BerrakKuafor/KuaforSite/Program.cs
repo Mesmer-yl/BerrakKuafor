@@ -1,23 +1,24 @@
 using DataLayer.Context;
 using DataLayer.Repos;
+using DataLayer.Repos.Abstracts;
+using DataLayer.Repos.Concretes;
 using EntityLayer.Concretes;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
+using ServiceLayer.Services.Abstracts;
+using ServiceLayer.Services.Concretes;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-// Database DefaultConnection
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Session
 builder.Services.AddSession();
 
-// Identity
 builder.Services.AddIdentity<AppUser, AppRole>(opt =>
 {
     opt.Password.RequireNonAlphanumeric = false;
@@ -33,7 +34,13 @@ builder.Services.AddIdentity<AppUser, AppRole>(opt =>
 
 #region DI Scope OP
 
+builder.Services.AddScoped<IHairdresserRepo, HairdresserRepo>();
+builder.Services.AddScoped<IServiceRepo, ServiceRepo>();
+builder.Services.AddScoped<IHairdresserService, HairdresserService>();
 
+builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();
+builder.Services.AddScoped<IEmployeeServiceRepo, EmployeeServiceRepo>();
+builder.Services.AddScoped<IEmployeeService, ServiceLayer.Services.Concretes.EmployeeManager>();
 
 #endregion
 

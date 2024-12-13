@@ -7906,19 +7906,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\oktay\\.nuget\\packages\\": {}
+    "C:\\Users\\Esmer Bilgi\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\KuaforSite\\KuaforSite.csproj",
+      "projectUniqueName": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\KuaforSite\\KuaforSite.csproj",
       "projectName": "KuaforSite",
-      "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\KuaforSite\\KuaforSite.csproj",
-      "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\KuaforSite\\obj\\",
+      "projectPath": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\KuaforSite\\KuaforSite.csproj",
+      "packagesPath": "C:\\Users\\Esmer Bilgi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\KuaforSite\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Esmer Bilgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7933,8 +7938,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\ServiceLayer\\ServiceLayer.csproj": {
-              "projectPath": "C:\\Users\\oktay\\Desktop\\WebProgramlamaOdevi\\BerrakKuafor\\BerrakKuafor\\ServiceLayer\\ServiceLayer.csproj"
+            "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\ServiceLayer\\ServiceLayer.csproj": {
+              "projectPath": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\ServiceLayer\\ServiceLayer.csproj"
             }
           }
         }

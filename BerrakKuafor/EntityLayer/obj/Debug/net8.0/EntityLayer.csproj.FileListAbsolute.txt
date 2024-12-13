@@ -10,15 +10,15 @@ C:\Users\me_ct\OneDrive\Masaüstü\OKTAY\KuaforSite\EntityLayer\obj\Debug\net8.0
 C:\Users\me_ct\OneDrive\Masaüstü\OKTAY\KuaforSite\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
 C:\Users\me_ct\OneDrive\Masaüstü\OKTAY\KuaforSite\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
 C:\Users\me_ct\OneDrive\Masaüstü\OKTAY\KuaforSite\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\bin\Debug\net8.0\EntityLayer.deps.json
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\bin\Debug\net8.0\EntityLayer.dll
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\bin\Debug\net8.0\EntityLayer.pdb
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\obj\Debug\net8.0\EntityLayer.csproj.AssemblyReference.cache
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\obj\Debug\net8.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfoInputs.cache
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfo.cs
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\obj\Debug\net8.0\EntityLayer.csproj.CoreCompileInputs.cache
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\obj\Debug\net8.0\EntityLayer.dll
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
-C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 4 - Panel Kullanıcı İşlemleri\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\bin\Debug\net8.0\EntityLayer.deps.json
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\bin\Debug\net8.0\EntityLayer.dll
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\bin\Debug\net8.0\EntityLayer.pdb
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\obj\Debug\net8.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\obj\Debug\net8.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfo.cs
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\obj\Debug\net8.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\obj\Debug\net8.0\EntityLayer.dll
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
+C:\Users\Esmer Bilgi\Desktop\web programlama odev\Oktay-ASPNetCore8\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
