@@ -19,5 +19,6 @@ namespace EntityLayer.Concretes
         [ForeignKey("HairdresserId")]
         public Hairdresser Hairdresser { get; set; }
         public ICollection<EmployeeService> EmployeeServices { get; set; }
+        public ICollection<Shift> Shifts { get; set; }
     }
 }

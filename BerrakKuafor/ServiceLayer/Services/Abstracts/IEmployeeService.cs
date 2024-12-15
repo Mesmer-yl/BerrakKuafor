@@ -12,8 +12,12 @@ namespace ServiceLayer.Services.Abstracts
     {
         Task CreateEmployee(EmployeeAddVM _employeeAddVM, int hairdresserId);
         List<EmployeeVM> GetAllEmployeesWithUser(int hairdresserId);
+        //EmployeService OP
         List<EmployeeServiceUpdateVM> GetAllEmployeeService(int employeeId);
         void CreateEmployeeService(EmployeeServiceAddVM _employeeServiceAddVM);
         void UpdateEmployeeService(EmployeeServiceUpdateVM _employeeServiceUpdateVM);
+        //Shift OP
+        List<ShiftsVM> GetAllShiftByEmployee(int employeeId);
+        void AddOrUpdateShift(ShiftAddVM _shiftAddVM);
     }
 }

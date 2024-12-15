@@ -39,6 +39,7 @@ builder.Services.AddScoped<IServiceRepo, ServiceRepo>();
 builder.Services.AddScoped<IHairdresserService, HairdresserService>();
 
 builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();
+builder.Services.AddScoped<IShiftRepo, ShiftRepo>();
 builder.Services.AddScoped<IEmployeeServiceRepo, EmployeeServiceRepo>();
 builder.Services.AddScoped<IEmployeeService, ServiceLayer.Services.Concretes.EmployeeManager>();
 

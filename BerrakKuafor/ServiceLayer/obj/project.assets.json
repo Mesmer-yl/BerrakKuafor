@@ -2960,24 +2960,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Esmer Bilgi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\oktay\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\ServiceLayer\\ServiceLayer.csproj",
+      "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 7 - Çalışan İşlemleri, Mesai işlemleri\\ServiceLayer\\ServiceLayer.csproj",
       "projectName": "ServiceLayer",
-      "projectPath": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\ServiceLayer\\ServiceLayer.csproj",
-      "packagesPath": "C:\\Users\\Esmer Bilgi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\ServiceLayer\\obj\\",
+      "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 7 - Çalışan İşlemleri, Mesai işlemleri\\ServiceLayer\\ServiceLayer.csproj",
+      "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 7 - Çalışan İşlemleri, Mesai işlemleri\\ServiceLayer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Esmer Bilgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2992,8 +2987,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\DataLayer\\DataLayer.csproj": {
-              "projectPath": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\DataLayer\\DataLayer.csproj"
+            "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 7 - Çalışan İşlemleri, Mesai işlemleri\\DataLayer\\DataLayer.csproj": {
+              "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 7 - Çalışan İşlemleri, Mesai işlemleri\\DataLayer\\DataLayer.csproj"
             }
           }
         }

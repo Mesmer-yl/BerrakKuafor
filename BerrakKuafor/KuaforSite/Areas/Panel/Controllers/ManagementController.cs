@@ -13,26 +13,15 @@ namespace KuaforSite.Areas.Panel.Controllers
     {
         private readonly IHairdresserService _hairdresserService;
         private readonly IEmployeeService _employeeService;
-        private readonly IEmployeeServiceRepo _employeeServiceRepo;
         private readonly UserManager<AppUser> _userManager;
         private string _email => User.Identity!.Name!;
 
-        public ManagementController(IHairdresserService hairdresserService, UserManager<AppUser> userManager, IEmployeeService employeeService, IEmployeeServiceRepo employeeServiceRepo)
+        public ManagementController(IHairdresserService hairdresserService, UserManager<AppUser> userManager, 
+            IEmployeeService employeeService)
         {
             _hairdresserService = hairdresserService;
             _userManager = userManager;
             _employeeService = employeeService;
-            _employeeServiceRepo = employeeServiceRepo;
-        }
-        public IActionResult Sil()
-        {
-            var items =  _employeeServiceRepo.GetAllByCondition(x => x.EmployeeId == 1);
-            foreach(var item in items)
-            {
-                _employeeServiceRepo.Delete(item);
-            }
-            _employeeServiceRepo.Save();
-            return RedirectToAction("Employees", "Management");
         }
         [HttpGet]
         public async Task<IActionResult> Index()
@@ -63,7 +52,7 @@ namespace KuaforSite.Areas.Panel.Controllers
                 var updHairdresser = await _hairdresserService.GetHairdresserIdByUserAsync(_email);
                 await _employeeService.CreateEmployee(_employeeAddVM, updHairdresser.Id);
                 var jsonDepartment = new { saveText = _employeeAddVM.Email + " kullanıcı başarıyla çalışan olarak eklendi" };
-               
+              
                 Response.ContentType = "application/json";
                 return Json(jsonDepartment);
             }
@@ -97,7 +86,6 @@ namespace KuaforSite.Areas.Panel.Controllers
                 };
                  _employeeService.CreateEmployeeService(addEmployeeServiceVM2);
                 var jsonDepartment = new { saveText = "Eklendi." };
-              
                 Response.ContentType = "application/json";
                 return Json(jsonDepartment);
             }
@@ -123,7 +111,6 @@ namespace KuaforSite.Areas.Panel.Controllers
                 };
                 _employeeService.UpdateEmployeeService(_employeeServiceUpdateVM2);
                 var jsonDepartment = new { saveText = "Güncellendi." };
-             
                 Response.ContentType = "application/json";
                 return Json(jsonDepartment);
             }
@@ -132,6 +119,20 @@ namespace KuaforSite.Areas.Panel.Controllers
                 var errorResponse = new { message = "Bir hata oluştu. Lütfen daha sonra tekrar deneyin." };
                 return Json(errorResponse);
             }
+        }
+        [HttpGet]
+        public IActionResult Shifts(int employeeId)
+        {
+            ViewBag.Shifts = _employeeService.GetAllShiftByEmployee(employeeId);
+            ViewBag.EmployeeId = employeeId;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Shifts(ShiftAddVM _shiftAddVM)
+        {
+            if (!ModelState.IsValid) return View();
+            _employeeService.AddOrUpdateShift(_shiftAddVM);
+            return RedirectToAction(nameof(Shifts),"Management", new {employeeId = _shiftAddVM.EmployeeId});
         }
         [HttpGet]
         public IActionResult Reservations()

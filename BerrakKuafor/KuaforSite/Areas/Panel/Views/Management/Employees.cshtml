@@ -63,7 +63,7 @@
                         $.ajax({
                             url: "/Panel/Management/Employees/",
                             type: "POST",
-                            data: JSON.stringify(addEmployeeModel),
+                            data: JSON.stringify(addEmployeeModel), 
                             contentType: "application/json; charset=utf-8",
                             success: function (response) {
                                 alert(response.saveText);

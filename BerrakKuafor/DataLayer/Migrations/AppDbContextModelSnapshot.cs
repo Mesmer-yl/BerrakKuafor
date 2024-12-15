@@ -235,6 +235,33 @@ namespace DataLayer.Migrations
                     b.ToTable("Services");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concretes.Shift", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DayOfWeek")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("Shifts");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -390,6 +417,17 @@ namespace DataLayer.Migrations
                     b.Navigation("AppUser");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concretes.Shift", b =>
+                {
+                    b.HasOne("EntityLayer.Concretes.Employee", "Employee")
+                        .WithMany("Shifts")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Employee");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("EntityLayer.Concretes.AppRole", null)
@@ -444,6 +482,8 @@ namespace DataLayer.Migrations
             modelBuilder.Entity("EntityLayer.Concretes.Employee", b =>
                 {
                     b.Navigation("EmployeeServices");
+
+                    b.Navigation("Shifts");
                 });
 
             modelBuilder.Entity("EntityLayer.Concretes.Hairdresser", b =>

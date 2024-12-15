@@ -114,10 +114,9 @@ namespace KuaforSite.Areas.Panel.Controllers
 
                 await _userManager.UpdateAsync(currentUser);
                 TempData["UpdateUserMessage"] = "Kullanıcı bilgileri başarıyla güncellendi.";
-                return RedirectToAction(nameof(UserOperationsController.UpdateUser),"UserOperations", new {userId = currentUser.Id});
+                return RedirectToAction(nameof(UserOperationsController.UpdateUser),"UserOperations", new {userId = currentUser.Id}); 
             }
 
-        
             var roleList = await _roleManager.Roles.ToListAsync();
             _userUpdateByModVM.Roles = roleList.Select(role => new RoleItem
             {

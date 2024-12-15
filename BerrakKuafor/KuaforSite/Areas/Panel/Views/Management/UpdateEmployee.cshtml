@@ -9,6 +9,8 @@
 <span class="page-title-line"></span>
 <input id="employeeId" type="hidden" value="@ViewBag.EmployeeId" />
 <div class="panel-card">
+    <a class="btn purple-soft" asp-area="Panel" asp-controller="Management" asp-action="Shifts" asp-route-employeeId="@ViewBag.EmployeeId">Mesai İşlemleri</a>
+    <h6 class="card-title">Hizmetler</h6>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -120,17 +122,17 @@
                         $.ajax({
                             url: "/Panel/Management/AddEmployeeService/",
                             type: "POST",
-                            data: JSON.stringify(addEmployeeServiceVM),
+                            data: JSON.stringify(addEmployeeServiceVM), 
                             contentType: "application/json; charset=utf-8", 
                             success: function (response) {
                                 alert(response.saveText);
-                                isProcessing = false;
+                                isProcessing = false; 
                                 window.location.replace("/Panel/Management/UpdateEmployee?employeeId=" + employeeId);
                             },
                             error: function (jqXHR, textStatus, errorThrown) {
                                 console.error("AJAX Error:", textStatus, errorThrown);
                                 alert("İşleminiz gerçekleşmedi: " + jqXHR.responseText);
-                                isProcessing = false;
+                                isProcessing = false; 
                             }
                         });
                     }
@@ -150,7 +152,7 @@
                     var durationParts = duration.split(':');  // ["HH", "mm"]
                     var hours = parseInt(durationParts[0], 10);
                     var minutes = parseInt(durationParts[1], 10);
-                    var formattedDuration = hours * 60 + minutes;
+                    var formattedDuration = hours * 60 + minutes; 
                     var isPro = isProInput ? isProInput.value === 'true' : false;
                     var employeeId = document.getElementById("employeeId").value;
 

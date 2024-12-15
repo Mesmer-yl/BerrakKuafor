@@ -559,24 +559,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Esmer Bilgi\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\oktay\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\EntityLayer\\EntityLayer.csproj",
+      "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 7 - Çalışan İşlemleri, Mesai işlemleri\\EntityLayer\\EntityLayer.csproj",
       "projectName": "EntityLayer",
-      "projectPath": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\EntityLayer\\EntityLayer.csproj",
-      "packagesPath": "C:\\Users\\Esmer Bilgi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Esmer Bilgi\\Desktop\\web programlama odev\\Oktay-ASPNetCore8\\Commit 6 - Çalışan işlemleri, Çalışan hizmetleri\\EntityLayer\\obj\\",
+      "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 7 - Çalışan İşlemleri, Mesai işlemleri\\EntityLayer\\EntityLayer.csproj",
+      "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 7 - Çalışan İşlemleri, Mesai işlemleri\\EntityLayer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Esmer Bilgi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

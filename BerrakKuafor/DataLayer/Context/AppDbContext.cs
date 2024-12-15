@@ -23,14 +23,14 @@ namespace DataLayer.Context
                 .HasOne(e => e.AppUser)
                 .WithMany() 
                 .HasForeignKey(e => e.EmployeeId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Cascade); 
 
             // Employee - Hairdresser ilişkisi
             modelBuilder.Entity<Employee>()
                 .HasOne(e => e.Hairdresser)
-                .WithMany(h => h.Employees) 
+                .WithMany(h => h.Employees)
                 .HasForeignKey(e => e.HairdresserId)
-                .OnDelete(DeleteBehavior.NoAction);
+                .OnDelete(DeleteBehavior.NoAction); 
 
             // EmployeeService - Employee ilişki konfigürasyonu
             modelBuilder.Entity<EmployeeService>()
@@ -44,12 +44,13 @@ namespace DataLayer.Context
                 .HasOne(es => es.Service)
                 .WithMany(s => s.EmployeeServices)
                 .HasForeignKey(es => es.ServiceId)
-                .OnDelete(DeleteBehavior.NoAction); 
+                .OnDelete(DeleteBehavior.NoAction);
 
         }
         public DbSet<Hairdresser> Hairdressers { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeService> EmployeeServices { get; set; }
+        public DbSet<Shift> Shifts { get; set; }
     }
 }

@@ -1,0 +1,77 @@
+﻿@model ShiftAddVM
+@{
+    ViewData["Title"] = "Shifts";
+    Layout = "~/Areas/Panel/Views/Shared/_Layout.cshtml";
+    var shiftList = ViewBag.Shifts as List<ShiftsVM>;
+}
+
+<h5>Kuaför Yönetimi > Çalışan İşlemleri > <strong class="text-decoration-underline">Çalışan Mesaileri</strong></h5>
+<span class="page-title-line"></span>
+<input id="employeeId" type="hidden" value="@ViewBag.EmployeeId" />
+
+<div class="panel-card">
+
+    <form class="form" method="post" asp-area="Panel" asp-controller="Management" asp-action="Shifts">
+        <input class="form-control" type="hidden" asp-for="EmployeeId" />
+        <div class="form-group">
+                <label asp-for="DayOfWeek" for="DayOfWeek">Gün</label>
+                <select asp-for="DayOfWeek" id="DayOfWeek" name="DayOfWeek" class="form-control">
+                    @foreach (var day in Enum.GetValues(typeof(DayOfWeek)))
+                    {
+                        <option value="@day">@day</option>
+                    }
+                </select>
+                <span asp-validation-for="DayOfWeek" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="StartTime" for="StartTime" class="form-label"></label>
+            <input class="form-control" type="time" asp-for="StartTime" />
+            <span asp-validation-for="StartTime" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="EndTime" for="EndTime" class="form-label"></label>
+            <input class="form-control" type="time" asp-for="EndTime"  />
+            <span asp-validation-for="EndTime" class="text-danger"></span>
+        </div>
+        <div class="form-group  border-0">
+            <button type="submit" class="btn purple-soft form-control">Ekle / Güncelle</button>
+        </div>
+    </form>
+</div>
+<div class="panel-card">
+    <h6 class="card-title">Mevcut Mesailer</h6>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Gün
+                </th>
+                <th>
+                    Başlangıç
+                </th>
+                <th>
+                    Bitiş
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (shiftList!=null && shiftList.Any())
+            {
+                @foreach (var shift in shiftList)
+                {
+                    <tr>
+                        <td>
+                            @shift.DayOfWeek
+                        </td>
+                        <td>
+                            @shift.StartTime
+                        </td>
+                        <td>
+                            @shift.EndTime
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

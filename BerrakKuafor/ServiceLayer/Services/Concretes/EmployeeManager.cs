@@ -16,13 +16,15 @@ namespace ServiceLayer.Services.Concretes
     {
         private readonly IEmployeeRepo _employeeRepo;
         private readonly IEmployeeServiceRepo _employeeServiceRepo;
+        private readonly IShiftRepo _shiftRepo;
         private readonly UserManager<AppUser> _userManager;
 
-        public EmployeeManager(IEmployeeRepo employeeRepo, UserManager<AppUser> userManager, IEmployeeServiceRepo employeeServiceRepo)
+        public EmployeeManager(IEmployeeRepo employeeRepo, UserManager<AppUser> userManager, IEmployeeServiceRepo employeeServiceRepo, IShiftRepo shiftRepo)
         {
             _employeeRepo = employeeRepo;
             _userManager = userManager;
             _employeeServiceRepo = employeeServiceRepo;
+            _shiftRepo = shiftRepo;
         }
 
         public async Task CreateEmployee(EmployeeAddVM _employeeAddVM, int hairdresserId)
@@ -49,6 +51,30 @@ namespace ServiceLayer.Services.Concretes
             };
             _employeeServiceRepo.Add(employeeService);
             _employeeServiceRepo.Save();
+        }
+
+        public void AddOrUpdateShift(ShiftAddVM _shiftAddVM)
+        {
+            var shiftThere = _shiftRepo.GetAllByCondition(x=>x.EmployeeId==_shiftAddVM.EmployeeId && x.DayOfWeek==_shiftAddVM.DayOfWeek).SingleOrDefault();
+            if (shiftThere != null)
+            {
+                shiftThere.StartTime = _shiftAddVM.StartTime;
+                shiftThere.EndTime = _shiftAddVM.EndTime;
+                _shiftRepo.Update(shiftThere);
+            }
+            else
+            {
+
+                var shift = new Shift()
+                {
+                    DayOfWeek = _shiftAddVM.DayOfWeek,
+                    StartTime = _shiftAddVM.StartTime,
+                    EndTime = _shiftAddVM.EndTime,
+                    EmployeeId = _shiftAddVM.EmployeeId
+                };
+                _shiftRepo.Add(shift);
+            }
+            _shiftRepo.Save();
         }
 
         public List<EmployeeServiceUpdateVM> GetAllEmployeeService(int employeeId)
@@ -88,6 +114,25 @@ namespace ServiceLayer.Services.Concretes
             return employeeList;
         }
 
+        public List<ShiftsVM> GetAllShiftByEmployee(int employeeId)
+        {
+            var shifts = _shiftRepo.GetAllByCondition(x => x.EmployeeId == employeeId);
+            var shiftListModel = new List<ShiftsVM>();
+            foreach(var shift in shifts)
+            {
+                var shiftModel = new ShiftsVM()
+                {
+                    Id = shift.Id,
+                    EmployeeId = shift.EmployeeId,
+                    DayOfWeek = shift.DayOfWeek,
+                    StartTime = shift.StartTime,
+                    EndTime = shift.EndTime
+                };
+                shiftListModel.Add(shiftModel);
+            }
+            return shiftListModel;
+        }
+
         public void UpdateEmployeeService(EmployeeServiceUpdateVM _employeeServiceUpdateVM)
         {
             var id = _employeeServiceUpdateVM.Id;
@@ -99,5 +144,6 @@ namespace ServiceLayer.Services.Concretes
             _employeeServiceRepo.Save();
 
         }
+
     }
 }
