@@ -23,12 +23,12 @@ namespace DataLayer.Context
                 .HasOne(e => e.AppUser)
                 .WithMany() 
                 .HasForeignKey(e => e.EmployeeId)
-                .OnDelete(DeleteBehavior.Cascade); 
+                .OnDelete(DeleteBehavior.Cascade);
 
             // Employee - Hairdresser ilişkisi
             modelBuilder.Entity<Employee>()
                 .HasOne(e => e.Hairdresser)
-                .WithMany(h => h.Employees)
+                .WithMany(h => h.Employees) 
                 .HasForeignKey(e => e.HairdresserId)
                 .OnDelete(DeleteBehavior.NoAction); 
 
@@ -44,6 +44,20 @@ namespace DataLayer.Context
                 .HasOne(es => es.Service)
                 .WithMany(s => s.EmployeeServices)
                 .HasForeignKey(es => es.ServiceId)
+                .OnDelete(DeleteBehavior.NoAction); 
+
+            // Reservation -> Employee ilişkisi
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Employee)
+                .WithMany(e => e.Reservations) 
+                .HasForeignKey(r => r.EmployeeId)
+                .OnDelete(DeleteBehavior.NoAction);
+
+            // Reservation -> Hairdresser ilişkisi
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Hairdresser)
+                .WithMany(h => h.Reservations) 
+                .HasForeignKey(r => r.HairdresserId)
                 .OnDelete(DeleteBehavior.NoAction);
 
         }
@@ -52,5 +66,6 @@ namespace DataLayer.Context
         public DbSet<Employee> Employees { get; set; }
         public DbSet<EmployeeService> EmployeeServices { get; set; }
         public DbSet<Shift> Shifts { get; set; }
+        public DbSet<Reservation> Reservations { get; set; }
     }
 }

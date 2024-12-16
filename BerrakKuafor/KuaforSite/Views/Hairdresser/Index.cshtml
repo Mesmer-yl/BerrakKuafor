@@ -1,0 +1,63 @@
+﻿@model HairdresserUpdateVM
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var employeesWithServices = ViewBag.EmployeesWithServices as List<EmployeeWithServiceVM>;
+    var servicesModel = ViewBag.ServiceList as List<ServiceVM>;
+}
+<h1 class="hairdresser-title"> @Model.Name</h1>
+<input type="hidden" value="@Model.Id"/>
+<div class="hairdresser-card">
+    <h3>Bilgiler</h3>
+    <span class="d-block"><strong>Hizmet Alanı - </strong>@Model.Field</span>
+    <span class="d-block"><strong>Açılış Saati - </strong>@Model.OpenTime</span>
+    <span class="d-block"><strong>Kapanış Saati - </strong>@Model.CloseTime</span>
+    <span class="d-block"><strong>GSM No - </strong>@Model.PhoneNumber</span>
+    <span class="d-block"><strong>Adres - </strong>@Model.Address</span>
+</div>
+<div class="hairdresser-card">
+    <h3>Hizmetler</h3>
+    <span>
+        @foreach (var service in servicesModel)
+        {
+            <i class="px-2">@service.Name</i>
+        }
+    </span>
+</div>
+<div class="hairdresser-card">
+    <h3>Çalışanlar</h3>
+    @foreach(var employee in employeesWithServices)
+    {
+
+        <div class="employee-card">
+            <span class="d-block"><strong>@employee.EmployeeName</strong> @if (employee.Services != null && employee.Services.Any())
+                {
+                    <a asp-controller="Hairdresser" asp-action="Reservation" asp-route-hairdresserId="@Model.Id" asp-route-hairdresserName="@Model.Name" asp-route-employeeId="@employee.EmployeeId" class="reservation-btn">Randevu Al</a>
+                }
+                else { }</span>
+            <span class="d-block">
+                @if (employee.Services!=null && employee.Services.Any())
+                {
+                    @foreach (var service in employee.Services)
+                    {
+                        <i class="px-2">
+                            @if (service.IsPro == true)
+                            {
+                                <i class="text-decoration-underline"><b>*@service.Name</b></i>
+                            }
+                            else
+                            {
+                                @service.Name
+                            }
+                        </i>
+                    }
+                }
+                else
+                {
+                    <i>Hizmet bulunamadı</i>
+                }
+            </span>
+        </div>
+    }
+</div>
+

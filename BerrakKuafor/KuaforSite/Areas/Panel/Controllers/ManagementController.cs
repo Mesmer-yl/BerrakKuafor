@@ -52,7 +52,6 @@ namespace KuaforSite.Areas.Panel.Controllers
                 var updHairdresser = await _hairdresserService.GetHairdresserIdByUserAsync(_email);
                 await _employeeService.CreateEmployee(_employeeAddVM, updHairdresser.Id);
                 var jsonDepartment = new { saveText = _employeeAddVM.Email + " kullanıcı başarıyla çalışan olarak eklendi" };
-              
                 Response.ContentType = "application/json";
                 return Json(jsonDepartment);
             }

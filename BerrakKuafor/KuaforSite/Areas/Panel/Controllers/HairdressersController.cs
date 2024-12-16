@@ -66,7 +66,6 @@ namespace KuaforSite.Areas.Panel.Controllers
             {
                 _hairdresserService.CreateService(_serviceAddVM);
                 var jsonDepartment = new { saveText = _serviceAddVM.Name+" hizmeti başarıyla eklendi" };
-               
                 Response.ContentType = "application/json";
                 return Json(jsonDepartment);
             }
@@ -83,7 +82,6 @@ namespace KuaforSite.Areas.Panel.Controllers
             {
                 _hairdresserService.UpdateService(_serviceVM);
                 var jsonDepartment = new { saveText = _serviceVM.Name + " hizmeti başarıyla güncellendi" };
-              
                 Response.ContentType = "application/json";
                 return Json(jsonDepartment);
             }

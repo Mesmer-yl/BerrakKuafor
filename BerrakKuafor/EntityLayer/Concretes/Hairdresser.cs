@@ -24,5 +24,6 @@ namespace EntityLayer.Concretes
 
 
         public ICollection<Employee> Employees { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
     }
 }

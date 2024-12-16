@@ -20,5 +20,6 @@ namespace EntityLayer.Concretes
         public Hairdresser Hairdresser { get; set; }
         public ICollection<EmployeeService> EmployeeServices { get; set; }
         public ICollection<Shift> Shifts { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
     }
 }

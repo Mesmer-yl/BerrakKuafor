@@ -90,7 +90,7 @@
             function setEventListeners() {
                 var isProcessing = false;
                 $('.addEmpSerBtn').on('click', function () {
-                    if (isProcessing) return; 
+                    if (isProcessing) return;  
 
                     isProcessing = true; 
                     var serviceId = $(this).data('id');
@@ -99,7 +99,7 @@
                     var inputIsPro = "isPro#" + serviceId;
                     var moneyInput = document.getElementById(inputMoney);
                     var durationInput = document.getElementById(inputDuration);
-                    var isProInput = document.querySelector('input[name="' + inputIsPro + '"]:checked');
+                    var isProInput = document.querySelector('input[name="' + inputIsPro + '"]:checked'); 
                     var money = parseInt(moneyInput.value);
                     var duration = durationInput.value;
                     var durationParts = duration.split(':');  // ["HH", "mm"]
@@ -122,8 +122,8 @@
                         $.ajax({
                             url: "/Panel/Management/AddEmployeeService/",
                             type: "POST",
-                            data: JSON.stringify(addEmployeeServiceVM), 
-                            contentType: "application/json; charset=utf-8", 
+                            data: JSON.stringify(addEmployeeServiceVM),
+                            contentType: "application/json; charset=utf-8",
                             success: function (response) {
                                 alert(response.saveText);
                                 isProcessing = false; 
@@ -146,14 +146,14 @@
                     var inputIsProFalse = "isProFalse#" + serviceId;
                     var moneyInput = document.getElementById(inputMoney);
                     var durationInput = document.getElementById(inputDuration);
-                    var isProInput = document.querySelector('input[name="' + inputIsPro + '"]:checked');
+                    var isProInput = document.querySelector('input[name="' + inputIsPro + '"]:checked'); 
                     var money = parseInt(moneyInput.value);
                     var duration = durationInput.value;
                     var durationParts = duration.split(':');  // ["HH", "mm"]
                     var hours = parseInt(durationParts[0], 10);
                     var minutes = parseInt(durationParts[1], 10);
                     var formattedDuration = hours * 60 + minutes; 
-                    var isPro = isProInput ? isProInput.value === 'true' : false;
+                    var isPro = isProInput ? isProInput.value === 'true' : false; 
                     var employeeId = document.getElementById("employeeId").value;
 
                     var inputEmployeeServiceId = "employeeServiceId#" + serviceId;
@@ -173,8 +173,8 @@
                         $.ajax({
                             url: "/Panel/Management/UpdateEmployeeService/",
                             type: "POST",
-                            data: JSON.stringify(updEmployeeServiceVM), 
-                            contentType: "application/json; charset=utf-8", 
+                            data: JSON.stringify(updEmployeeServiceVM),
+                            contentType: "application/json; charset=utf-8",
                             success: function (response) {
                                 alert(response.saveText);
                                 window.location.replace("/Panel/Management/UpdateEmployee?employeeId=" + employeeId);

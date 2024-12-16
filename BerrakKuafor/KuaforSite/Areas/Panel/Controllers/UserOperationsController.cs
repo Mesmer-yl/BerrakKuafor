@@ -47,7 +47,6 @@ namespace KuaforSite.Areas.Panel.Controllers
                 TempData["UpdateUserMessage"] = "Yeni kullanıcı başarıyla kaydedildi.";
                 return RedirectToAction(nameof(UpdateUser), "UserOperations", new { userId = newUser.Id });
             }
-
             ModelState.AddModelErrorList(identityResult.Errors.Select(x => x.Description).ToList());
             return View();
         }

@@ -218,6 +218,57 @@ namespace DataLayer.Migrations
                     b.ToTable("Hairdressers");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concretes.Reservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("HairdresserId")
+                        .HasColumnType("int");
+
+                    b.Property<bool?>("IsStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Money")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Reason")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Services")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("HairdresserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Reservations");
+                });
+
             modelBuilder.Entity("EntityLayer.Concretes.Service", b =>
                 {
                     b.Property<int>("Id")
@@ -417,6 +468,33 @@ namespace DataLayer.Migrations
                     b.Navigation("AppUser");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concretes.Reservation", b =>
+                {
+                    b.HasOne("EntityLayer.Concretes.Employee", "Employee")
+                        .WithMany("Reservations")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concretes.Hairdresser", "Hairdresser")
+                        .WithMany("Reservations")
+                        .HasForeignKey("HairdresserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concretes.AppUser", "AppUser")
+                        .WithMany("Reservations")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Hairdresser");
+                });
+
             modelBuilder.Entity("EntityLayer.Concretes.Shift", b =>
                 {
                     b.HasOne("EntityLayer.Concretes.Employee", "Employee")
@@ -479,9 +557,16 @@ namespace DataLayer.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("EntityLayer.Concretes.AppUser", b =>
+                {
+                    b.Navigation("Reservations");
+                });
+
             modelBuilder.Entity("EntityLayer.Concretes.Employee", b =>
                 {
                     b.Navigation("EmployeeServices");
+
+                    b.Navigation("Reservations");
 
                     b.Navigation("Shifts");
                 });
@@ -489,6 +574,8 @@ namespace DataLayer.Migrations
             modelBuilder.Entity("EntityLayer.Concretes.Hairdresser", b =>
                 {
                     b.Navigation("Employees");
+
+                    b.Navigation("Reservations");
                 });
 
             modelBuilder.Entity("EntityLayer.Concretes.Service", b =>
