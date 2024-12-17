@@ -1,11 +1,13 @@
 ﻿using EntityLayer.Concretes;
 using EntityLayer.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using ServiceLayer.Services.Abstracts;
 
 namespace KuaforSite.Areas.Panel.Controllers
 {
+    [Authorize(Roles ="Admin")]
     [Area("Panel")]
     public class HairdressersController : Controller
     {

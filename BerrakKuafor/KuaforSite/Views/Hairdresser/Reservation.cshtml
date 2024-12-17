@@ -89,10 +89,6 @@
                 totalMoneyElement.textContent = totalMoney.toFixed(2) + " ₺";
             }
 
-            //////////////////////////////////////
-
-
-            //////////////////////////////////////////
             const checkDateBtn = document.getElementById("checkDateBtn");
 
             checkDateBtn.addEventListener("click", function (e) {
@@ -100,10 +96,10 @@
 
                 const selectedServices = document.getElementById("selectedServices").textContent.trim(); 
                 const totalMoney = parseInt(document.getElementById("totalMoney").textContent.trim(), 10); 
-                const checkEmployeeIdInput = parseInt(document.getElementById("checkEmployeeIdInput").value.trim(), 10);
+                const checkEmployeeIdInput = parseInt(document.getElementById("checkEmployeeIdInput").value.trim(), 10); 
                 const checkHairdresserIdInput = parseInt(document.getElementById("checkHairdresserIdInput").value.trim(), 10);
                 const checkDateInput = new Date(document.getElementById("checkDateInput").value); 
-                const checkTimeInput = document.getElementById("checkTimeInput").value.trim(); 
+                const checkTimeInput = document.getElementById("checkTimeInput").value.trim();
 
                 if (!checkDateInput || !checkTimeInput) {
                     alert("Lütfen tarih ve saat seçiniz.");
@@ -138,12 +134,12 @@
                     contentType: 'application/json',
                     data: JSON.stringify({
                         selectedServices: selectedServices,
-                        totalDuration: totalDuration,
+                        totalDuration: totalDuration, 
                         totalMoney: totalMoney,
                         checkEmployeeId: checkEmployeeIdInput,
                         checkHairdresserId: checkHairdresserIdInput,
                         checkDate: fullDateTime.toISOString(),
-                        checkTime: timeInput 
+                        checkTime: timeInput
                     }),
                     success: function (response) {
                         document.getElementById("resultContext").innerText = response.message;

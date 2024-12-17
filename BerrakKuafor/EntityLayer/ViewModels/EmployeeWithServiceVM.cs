@@ -10,24 +10,24 @@ namespace EntityLayer.ViewModels
     {
         public int EmployeeId { get; set; }
         public string EmployeeName { get; set; } 
-        public List<EServiceModel>? Services { get; set; }  
+        public List<EServiceModel>? Services { get; set; } 
     }
     public class EmployeeWithDetailsViewModel
     {
         public int EmployeeId { get; set; }
         public int ServiceId { get; set; }
-        public string EmployeeName { get; set; }
-        public bool IsPro { get; set; }        
+        public string EmployeeName { get; set; } 
+        public bool IsPro { get; set; }         
         public int Money { get; set; }         
-        public TimeSpan Duration { get; set; } 
-        public string ServiceName { get; set; } 
+        public TimeSpan Duration { get; set; }  
+        public string ServiceName { get; set; }  
     }
     public class EServiceModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public bool IsPro { get; set; }          
-        public int Money { get; set; }           
-        public TimeSpan Duration { get; set; }  
+        public bool IsPro { get; set; }        
+        public int Money { get; set; }          
+        public TimeSpan Duration { get; set; } 
     }
 }

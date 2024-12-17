@@ -1,6 +1,7 @@
 ﻿using EntityLayer.Concretes;
 using EntityLayer.ViewModels;
 using KuaforSite.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Services.Abstracts;
@@ -21,7 +22,7 @@ namespace KuaforSite.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index(int hairdresserId=1)
+        public IActionResult Index(int hairdresserId)
         {
             var hairdresser = _hairdresserService.GetHairdresserById(hairdresserId);
             ViewBag.EmployeesWithServices = _reservationService.GetEmployeesByHairdresserId(hairdresserId);
@@ -29,15 +30,19 @@ namespace KuaforSite.Controllers
 
             return View(hairdresser);
         }
+
         [HttpGet]
         public IActionResult Reservation(int hairdresserId, string hairdresserName, int employeeId)
         {
+            if(!User.Identity.IsAuthenticated)return RedirectToAction("SignIn", "Authentication");
             ViewBag.HairdresserName= hairdresserName;
             ViewBag.HairdresserId= hairdresserId;
             var employee = _reservationService.GetEmployeesByHairdresserId(hairdresserId).Where(x=>x.EmployeeId==employeeId).Single();
 
             return View(employee);
         }
+
+        [Authorize(Roles = "Admin,Moderatör,Employee,Member")]
         [HttpPost]
         public async Task<JsonResult> Reservation([FromBody] CheckReservationModel model)
         {

@@ -1,0 +1,36 @@
+﻿@model List<ReservationsForUserVM>
+@{
+    ViewData["Title"] = "MyReservations";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h5>Randevularım</h5>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Kuaför</th>
+            <th>Çalışan</th>
+            <th>Hizmetler</th>
+            <th>Tarih</th>
+            <th>Saat</th>
+            <th>Ücret</th>
+            <th>Durum</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var reservation in Model){
+            <tr>
+                <td>@reservation.HairdresserName</td>
+                <td>@reservation.EmployeeName</td>
+                <td>@reservation.Services</td>
+                <td>@reservation.Date.ToShortDateString()</td>
+                <td>@reservation.Time</td>
+                <td>@reservation.Money ₺</td>
+                <td>@reservation.Status</td>
+                <td>@reservation.Reason</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

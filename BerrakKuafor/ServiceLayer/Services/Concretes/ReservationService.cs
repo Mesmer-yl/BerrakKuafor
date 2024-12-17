@@ -1,6 +1,7 @@
 ﻿using DataLayer.Repos.Abstracts;
 using EntityLayer.Concretes;
 using EntityLayer.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using ServiceLayer.Services.Abstracts;
 using System;
 using System.Collections.Generic;
@@ -16,13 +17,23 @@ namespace ServiceLayer.Services.Concretes
         private readonly IEmployeeServiceRepo _employeeServiceRepo;
         private readonly IReservationRepo _reservationRepo;
         private readonly IShiftRepo _shiftRepo;
-
-        public ReservationService(IEmployeeRepo employeeRepo, IEmployeeServiceRepo employeeServiceRepo, IReservationRepo reservationRepo, IShiftRepo shiftRepo)
+        private readonly UserManager<AppUser> _userManager;
+        public ReservationService(IEmployeeRepo employeeRepo, IEmployeeServiceRepo employeeServiceRepo, IReservationRepo reservationRepo, IShiftRepo shiftRepo, UserManager<AppUser> userManager)
         {
             _employeeRepo = employeeRepo;
             _employeeServiceRepo = employeeServiceRepo;
             _reservationRepo = reservationRepo;
             _shiftRepo = shiftRepo;
+            _userManager = userManager;
+        }
+
+        public void ChangeReservationStatus(int reservationId, bool status, string? reason)
+        {
+            var reservation = _reservationRepo.GetById(reservationId);
+            reservation.IsStatus = status;
+            reservation.Reason = reason;
+            _reservationRepo.Update(reservation);
+            _reservationRepo.Save();
         }
 
         public bool CheckReservation(int employeeId, DateTime date, int time, int duration)
@@ -31,7 +42,7 @@ namespace ServiceLayer.Services.Concretes
             if(shift==null) return false;
             int openTime = (int)shift.StartTime.TotalMinutes;
             int closeTime = (int)shift.EndTime.TotalMinutes;
-            if (time<openTime || (time + duration) > closeTime)
+            if (time<=openTime || (time + duration) >= closeTime)
             {
                 return false;
             }
@@ -61,6 +72,81 @@ namespace ServiceLayer.Services.Concretes
             };
             _reservationRepo.Add(reservation);
             _reservationRepo.Save();
+        }
+
+        public List<ReservationsForEmpVM> GetAllReservationsByEmployeeId(int employeeId)
+        {
+            var reservations = _reservationRepo.GetAllByCondition(x => x.EmployeeId == employeeId, "AppUser");
+            var resList = new List<ReservationsForEmpVM>();
+            foreach (var reservation in reservations)
+            {
+                var res = new ReservationsForEmpVM()
+                {
+                    Id = reservation.Id,
+                    UserId = reservation.UserId,
+                    UserNameSurname = reservation.AppUser.NameSurname,
+                    PhoneNumber = reservation.AppUser.PhoneNumber,
+                    StartTime = reservation.StartTime,
+                    EndTime = reservation.EndTime,
+                    Date = reservation.Date,
+                    Money = reservation.Money,
+                    Services = reservation.Services,
+                    IsStatus = reservation.IsStatus,
+                    Reason = reservation.Reason
+                };
+                resList.Add(res);
+            }
+            return resList;
+        }
+
+        public List<ReservationsForModVM> GetAllReservationsByHairdresserId(int hairdresserId)
+        {
+            var reservations = _reservationRepo.GetAllByCondition(x=>x.HairdresserId == hairdresserId,"AppUser,Employee,Employee.AppUser");
+            var resList  = new List<ReservationsForModVM>();
+            foreach (var reservation in reservations)
+            {
+                var res = new ReservationsForModVM()
+                {
+                    Id = reservation.Id,
+                    EmployeeNameSurname = reservation.Employee.AppUser.NameSurname,
+                    UserId = reservation.UserId,
+                    UserNameSurname = reservation.AppUser.NameSurname,
+                    PhoneNumber = reservation.AppUser.PhoneNumber,
+                    StartTime = reservation.StartTime,
+                    EndTime = reservation.EndTime,
+                    Date = reservation.Date,
+                    Money = reservation.Money,
+                    Services = reservation.Services,
+                    IsStatus = reservation.IsStatus,
+                    Reason  = reservation.Reason
+                };
+                resList.Add(res);
+            }
+            return resList;
+        }
+
+        public async Task<List<ReservationsForUserVM>> GetAllReservationsByUserId(string userName)
+        {
+            var currenUser = await _userManager.FindByNameAsync(userName);  
+            var reservations = _reservationRepo.GetAllByCondition(x => x.UserId == currenUser.Id, "Hairdresser,Employee,Employee.AppUser");
+            var resList = new List<ReservationsForUserVM>();
+            foreach (var reservation in reservations)
+            {
+                var res = new ReservationsForUserVM()
+                {
+                    HairdresserName = reservation.Hairdresser.Name,
+                    EmployeeName = reservation.Employee.AppUser.NameSurname,
+                    Services = reservation.Services,
+                    Date = reservation.Date,
+                    Time = reservation.StartTime,
+                    Money = reservation.Money,
+                    Reason = reservation.Reason
+                };
+
+                if (reservation.IsStatus == true) { res.Status = "Onaylandı"; } else if (reservation.IsStatus == false) { res.Status = "Reddedildi"; } else { res.Status = "Beklemede"; }
+                resList.Add(res);
+            }
+            return resList;
         }
 
         public List<EmployeeWithServiceVM> GetEmployeesByHairdresserId(int hairdresserId)

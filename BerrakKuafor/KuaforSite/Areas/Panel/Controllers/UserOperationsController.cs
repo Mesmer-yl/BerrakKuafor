@@ -1,6 +1,7 @@
 ﻿using EntityLayer.Concretes;
 using EntityLayer.ViewModels;
 using KuaforSite.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using System.Data;
 
 namespace KuaforSite.Areas.Panel.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Panel")]
     public class UserOperationsController : Controller
     {
@@ -47,6 +49,7 @@ namespace KuaforSite.Areas.Panel.Controllers
                 TempData["UpdateUserMessage"] = "Yeni kullanıcı başarıyla kaydedildi.";
                 return RedirectToAction(nameof(UpdateUser), "UserOperations", new { userId = newUser.Id });
             }
+
             ModelState.AddModelErrorList(identityResult.Errors.Select(x => x.Description).ToList());
             return View();
         }
@@ -113,9 +116,8 @@ namespace KuaforSite.Areas.Panel.Controllers
 
                 await _userManager.UpdateAsync(currentUser);
                 TempData["UpdateUserMessage"] = "Kullanıcı bilgileri başarıyla güncellendi.";
-                return RedirectToAction(nameof(UserOperationsController.UpdateUser),"UserOperations", new {userId = currentUser.Id}); 
+                return RedirectToAction(nameof(UserOperationsController.UpdateUser),"UserOperations", new {userId = currentUser.Id});
             }
-
             var roleList = await _roleManager.Roles.ToListAsync();
             _userUpdateByModVM.Roles = roleList.Select(role => new RoleItem
             {

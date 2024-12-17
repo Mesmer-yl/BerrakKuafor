@@ -22,12 +22,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="Panel" asp-controller="Home" asp-action="Index">Panel</a>
-                        </li>
+                        @if (User.IsInRole("Moderatör") || User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Panel" asp-controller="Home" asp-action="Index">Panel</a>
+                            </li>
+                        }
                         @if (User.Identity.IsAuthenticated)
                         {
 
+                            <li class="nav-item">
+                                <a asp-area="" asp-controller="User" asp-action="MyReservations" class="nav-link text-dark">Randevularım</a>
+                            </li>
                             <li class="nav-item">
                                 <span class="nav-link text-dark">Hoş geldiniz @User.Identity.Name</span>
                             </li>

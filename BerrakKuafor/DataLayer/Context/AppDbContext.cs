@@ -30,26 +30,26 @@ namespace DataLayer.Context
                 .HasOne(e => e.Hairdresser)
                 .WithMany(h => h.Employees) 
                 .HasForeignKey(e => e.HairdresserId)
-                .OnDelete(DeleteBehavior.NoAction); 
+                .OnDelete(DeleteBehavior.NoAction);
 
             // EmployeeService - Employee ilişki konfigürasyonu
             modelBuilder.Entity<EmployeeService>()
                 .HasOne(es => es.Employee)
                 .WithMany(e => e.EmployeeServices)
                 .HasForeignKey(es => es.EmployeeId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Cascade); 
 
             // EmployeeService - Service ilişki konfigürasyonu
             modelBuilder.Entity<EmployeeService>()
                 .HasOne(es => es.Service)
                 .WithMany(s => s.EmployeeServices)
                 .HasForeignKey(es => es.ServiceId)
-                .OnDelete(DeleteBehavior.NoAction); 
+                .OnDelete(DeleteBehavior.NoAction);
 
             // Reservation -> Employee ilişkisi
             modelBuilder.Entity<Reservation>()
                 .HasOne(r => r.Employee)
-                .WithMany(e => e.Reservations) 
+                .WithMany(e => e.Reservations)
                 .HasForeignKey(r => r.EmployeeId)
                 .OnDelete(DeleteBehavior.NoAction);
 

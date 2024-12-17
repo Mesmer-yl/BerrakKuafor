@@ -13,5 +13,9 @@ namespace ServiceLayer.Services.Abstracts
         List<ServiceVM> GetServiceByHairdresserId(int hairdresserId);
         bool CheckReservation(int employeeId,DateTime date,int time,int duration);
         void CreateReservation(ReservationAddVM _reservationAddVM);
+        List<ReservationsForModVM> GetAllReservationsByHairdresserId(int hairdresserId);
+        List<ReservationsForEmpVM> GetAllReservationsByEmployeeId(int employeeId);
+        Task<List<ReservationsForUserVM>> GetAllReservationsByUserId(string userName);
+        void ChangeReservationStatus(int reservationId, bool status, string? reason);
     }
 }

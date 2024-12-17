@@ -64,8 +64,8 @@
                         $.ajax({
                             url: "/Panel/Hairdressers/AddService/",
                             type: "POST",
-                            data: JSON.stringify(addServiceModel),
-                            contentType: "application/json; charset=utf-8",
+                            data: JSON.stringify(addServiceModel), 
+                            contentType: "application/json; charset=utf-8", 
                             success: function (response) {
                                 alert(response.saveText);
                                 window.location.reload(1);
@@ -94,7 +94,7 @@
                             url: "/Panel/Hairdressers/UpdateService/",
                             type: "POST",
                             data: JSON.stringify(updServiceModel),
-                            contentType: "application/json; charset=utf-8", 
+                            contentType: "application/json; charset=utf-8",
                             success: function (response) {
                                 alert(response.saveText);
                                 window.location.reload(1);

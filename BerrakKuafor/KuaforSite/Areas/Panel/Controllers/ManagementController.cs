@@ -2,26 +2,30 @@
 using EntityLayer.Concretes;
 using EntityLayer.ViewModels;
 using KuaforSite.Areas.Panel.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ServiceLayer.Services.Abstracts;
 
 namespace KuaforSite.Areas.Panel.Controllers
 {
+    [Authorize(Roles = "Moderatör")]
     [Area("Panel")]
     public class ManagementController : Controller
     {
         private readonly IHairdresserService _hairdresserService;
         private readonly IEmployeeService _employeeService;
+        private readonly IReservationService _reservationService;
         private readonly UserManager<AppUser> _userManager;
         private string _email => User.Identity!.Name!;
 
         public ManagementController(IHairdresserService hairdresserService, UserManager<AppUser> userManager, 
-            IEmployeeService employeeService)
+            IEmployeeService employeeService, IReservationService reservationService)
         {
             _hairdresserService = hairdresserService;
             _userManager = userManager;
             _employeeService = employeeService;
+            _reservationService = reservationService;
         }
         [HttpGet]
         public async Task<IActionResult> Index()
@@ -134,9 +138,44 @@ namespace KuaforSite.Areas.Panel.Controllers
             return RedirectToAction(nameof(Shifts),"Management", new {employeeId = _shiftAddVM.EmployeeId});
         }
         [HttpGet]
-        public IActionResult Reservations()
+        public async Task<IActionResult> Reservations(int? status)
         {
-            return View();
+            var updHairdresser = await _hairdresserService.GetHairdresserIdByUserAsync(_email);
+            var reservations = _reservationService.GetAllReservationsByHairdresserId(updHairdresser.Id);
+            if (status == 1)
+            {
+                reservations=reservations.Where(x=>x.IsStatus==true).ToList();
+            }else if(status == 2)
+            {
+                reservations = reservations.Where(x => x.IsStatus == false).ToList();
+            }
+            else if (status == 3)
+            {
+                reservations = reservations.Where(x => x.IsStatus == null).ToList();
+            }
+            return View(reservations);
+        }
+        [HttpGet]
+        public IActionResult AcceptReservation(int reservationId)
+        {
+            _reservationService.ChangeReservationStatus(reservationId, true,null);
+            return RedirectToAction(nameof(ManagementController.Reservations), "Management");
+        }
+        [HttpPost]
+        public JsonResult CancelReservation([FromBody] DeclineReservationModel _declineModel)
+        {
+            try
+            {
+                _reservationService.ChangeReservationStatus(_declineModel.ReservationId, false, _declineModel.Reason);
+                var jsonDepartment = new { saveText = "Reddedildi." };
+                Response.ContentType = "application/json";
+                return Json(jsonDepartment);
+            }
+            catch (Exception ex)
+            {
+                var errorResponse = new { message = "Bir hata oluştu. Lütfen daha sonra tekrar deneyin." };
+                return Json(errorResponse);
+            }
         }
     }
 }

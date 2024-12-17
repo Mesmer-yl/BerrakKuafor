@@ -16,55 +16,61 @@
             </div>
 
             <ul class="list-unstyled components">
-                <li class="">
-                    <a href="#homeSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sayfa İşlemleri</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Ana sayfa</a>
-                        </li>
-                        <li>
-                            <a href="#">İletişim</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Salon İşlemleri</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a asp-area="Panel" asp-controller="Hairdressers" asp-action="NewHairdresser">Yeni Salon</a>
-                        </li>
-                        <li>
-                            <a asp-area="Panel" asp-controller="Hairdressers" asp-action="Index">Salonlar</a>
-                        </li>
-                        <li>
-                            <a asp-area="Panel" asp-controller="Hairdressers" asp-action="Services">Hizmetler</a>
-                        </li>
-                    </ul>
-                </li>
+                @if (User.IsInRole("Admin")){
+                    <li class="">
+                        <a href="#homeSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sayfa İşlemleri</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Ana sayfa</a>
+                            </li>
+                            <li>
+                                <a href="#">İletişim</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Salon İşlemleri</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a asp-area="Panel" asp-controller="Hairdressers" asp-action="NewHairdresser">Yeni Salon</a>
+                            </li>
+                            <li>
+                                <a asp-area="Panel" asp-controller="Hairdressers" asp-action="Index">Salonlar</a>
+                            </li>
+                            <li>
+                                <a asp-area="Panel" asp-controller="Hairdressers" asp-action="Services">Hizmetler</a>
+                            </li>
+                        </ul>
+                    </li>
 
-                <li>
-                    <a href="#userSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Kullanıcı İşlemleri</a>
-                    <ul class="collapse list-unstyled" id="userSubmenu">
-                        <li>
-                            <a asp-area="Panel" asp-controller="UserOperations" asp-action="NewUser">Yeni Kullanıcı</a>
-                        </li>
-                        <li>
-                            <a asp-area="Panel" asp-controller="UserOperations" asp-action="Users">Kullanıcılar</a>
-                        </li>
-                        <li>
-                            <a asp-area="Panel" asp-controller="UserOperations" asp-action="Roles">Roller</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a asp-area="Panel" asp-controller="Management" asp-action="Index">Salon Yönetimi</a>
-                </li>
-                <li>
-                    <a asp-area="Panel" asp-controller="Management" asp-action="Employees">Çalışan Yönetimi</a>
-                </li>
-                <li>
-                    <a asp-area="Panel" asp-controller="Management" asp-action="Reservations">Randevular</a>
-                </li>
+                    <li>
+                        <a href="#userSubmenu" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Kullanıcı İşlemleri</a>
+                        <ul class="collapse list-unstyled" id="userSubmenu">
+                            <li>
+                                <a asp-area="Panel" asp-controller="UserOperations" asp-action="NewUser">Yeni Kullanıcı</a>
+                            </li>
+                            <li>
+                                <a asp-area="Panel" asp-controller="UserOperations" asp-action="Users">Kullanıcılar</a>
+                            </li>
+                            <li>
+                                <a asp-area="Panel" asp-controller="UserOperations" asp-action="Roles">Roller</a>
+                            </li>
+                        </ul>
+                    </li>
+                }
+                
+                @if (User.IsInRole("Moderatör"))
+                {
+                    <li>
+                        <a asp-area="Panel" asp-controller="Management" asp-action="Index">Salon Yönetimi</a>
+                    </li>
+                    <li>
+                        <a asp-area="Panel" asp-controller="Management" asp-action="Employees">Çalışan Yönetimi</a>
+                    </li>
+                    <li>
+                        <a asp-area="Panel" asp-controller="Management" asp-action="Reservations">Randevular</a>
+                    </li>
+                }
             </ul>
 
             <ul class="list-unstyled CTAs">
@@ -72,7 +78,7 @@
                     <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
                 </li>
                 <li>
-                    <a asp-area="deafult" asp-controller="Home" asp-action="Index" class="article">Siteye dön</a>
+                    <a asp-area="default" asp-controller="Home" asp-action="Index" class="article">Siteye dön</a>
                 </li>
                 <p>@DateTime.Now.Year, Tüm hakları saklıdır.</p>
             </ul>
