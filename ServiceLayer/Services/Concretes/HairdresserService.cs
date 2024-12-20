@@ -115,6 +115,23 @@ namespace ServiceLayer.Services.Concretes
             };
         }
 
+        public async Task<HairdresserUpdateVM> GetHairdresserIdByUserAsync(string email)
+        {
+            var currentUser = await _userManager.FindByEmailAsync(email);
+            var hairdrresser = _hairdresserRepo.GetAllByCondition(x=>x.ManagerId==currentUser!.Id).SingleOrDefault();
+            var hairdresserVM = new HairdresserUpdateVM()
+            {
+                Id= hairdrresser.Id,
+                Name = hairdrresser.Name,
+                PhoneNumber=hairdrresser.PhoneNumber,
+                Address = hairdrresser.Address,
+                Field = hairdrresser.Field,
+                OpenTime=hairdrresser.OpenTime,
+                CloseTime=hairdrresser.CloseTime
+            };
+            return hairdresserVM;
+        }
+
         public void UpdateHairdresserAsync(HairdresserUpdateVM _hairdresserUpdVM)
         {
             var currentHairdresser = _hairdresserRepo.GetById(_hairdresserUpdVM.Id);

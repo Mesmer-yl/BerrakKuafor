@@ -1,6 +1,7 @@
 ﻿using EntityLayer.Concretes;
 using EntityLayer.ViewModels;
 using KuaforSite.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using static System.Runtime.InteropServices.JavaScript.JSType;
@@ -89,6 +90,7 @@ namespace KuaforSite.Controllers
             ModelState.AddModelErrorList(identityResult.Errors.Select(x => x.Description).ToList());
             return View();
         }
+        [Authorize(Roles = "Admin,Moderatör,Employee,Member")]
         public async Task<IActionResult> LogOut()
         {
             await _signInManager.SignOutAsync();

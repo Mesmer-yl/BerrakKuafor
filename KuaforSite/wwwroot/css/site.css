@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Inconsolata:wght@200..900&display=swap');
 html {
   font-size: 14px;
 }
@@ -19,4 +20,131 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+/*
+    HAIRDRESSER PAGE
+*/
+.hairdresser-title {
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    padding: 1rem .5rem;
+    margin-bottom: .5em;
+}
+.hairdresser-card {
+    margin: .5em 0;
+    padding: 1em 1em;
+}
+.hairdresser-card h3{
+    margin-bottom:.7em;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color:rgb(36, 38, 42);
+}
+.hairdresser-card span{
+    padding:.3em 1em;
+}
+.hairdresser-card strong{
+    color:rgb(36, 36, 32);
+}
+.hairdresser-card .employee-card {
+    border-bottom: 1px solid rgb(180,180,180);
+    border-right: 1px solid rgb(220,220,220);
+    border-left: 1px solid rgb(220,220,220);
+    margin:.5em 0;
+}
+.hairdresser-card .employee-card .reservation-btn{
+    border:none;
+    border-radius:15px;
+    float:right;
+    padding:.2em 1.5em;
+    color:rgb(210,210,210);
+    font-weight:500;
+}
+
+/*
+    FORM AREA
+*/
+
+.form-area{
+    padding: 2em 5em 5em 5em;
+    border-radius:10px;
+    box-shadow:2px 2px 15px 3px black;
+}
+.form-area label, .form-area h3{
+    color:rgb(210,210,210);
+}
+.form-area h3{
+    padding:1em 0;
+}
+.form-area .form-group{
+    margin-bottom:1em;
+    padding:.5em .5em;
+    border-right:1px solid rgb(80,80,80);
+    border-left:1px solid rgb(80,80,80);
+    border-bottom:1px solid rgb(130,130,130);
+}
+.txt-soft-light {
+    color: rgb(210,210,210);
+}
+.card{
+    border-radius:10px;
+}
+.card .card-title{
+    padding-bottom:.5rem;
+    margin-bottom:.5rem;
+    border-bottom:1px solid rgb(120,120,120);
+}
+.border-male{
+    border: 3px solid crimson;
+}
+.border-female {
+    border: 3px solid dodgerblue;
+}
+.text-male {
+    color: crimson;
+}
+.text-female {
+    color: dodgerblue;
+}
+.bg-male {
+    background: rgba(153,0,0,.1);
+}
+
+.bg-female {
+    background: rgba(30,144,255,.1);
+}
+.title-male {
+    background: rgba(153,0,0,.5);
+    box-shadow: 2px 2px 15px 3px rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    color: rgb(190,190,190);
+    border-radius: 5px;
+}
+.area-male {
+    background: rgba(153,0,0,.2);
+    box-shadow: 2px 2px 15px 3px rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    color: rgb(210,210,210);
+    border-radius: 10px;
+}
+.title-female {
+    background: rgb(26, 51, 75,.7);
+    box-shadow: 2px 2px 15px 3px rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    color: rgb(190,190,190);
+    border-radius: 5px;
+}
+
+.area-female {
+    background: rgba(26, 51, 75,.3);
+    box-shadow: 2px 2px 15px 3px rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    color: rgb(210,210,210);
+    border-radius: 10px;
+}
+.bg-soft-light{
+    background:rgb(200,200,200);
+    padding:1em;
+    border-radius:10px;
 }

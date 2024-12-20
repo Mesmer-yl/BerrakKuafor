@@ -8,12 +8,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using ServiceLayer.Services.Abstracts;
 using ServiceLayer.Services.Concretes;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -38,6 +38,14 @@ builder.Services.AddScoped<IHairdresserRepo, HairdresserRepo>();
 builder.Services.AddScoped<IServiceRepo, ServiceRepo>();
 builder.Services.AddScoped<IHairdresserService, HairdresserService>();
 
+builder.Services.AddScoped<IEmployeeRepo, EmployeeRepo>();
+builder.Services.AddScoped<IShiftRepo, ShiftRepo>();
+builder.Services.AddScoped<IReservationRepo, ReservationRepo>();
+builder.Services.AddScoped<IEmployeeServiceRepo, EmployeeServiceRepo>();
+builder.Services.AddScoped<IEmployeeService, ServiceLayer.Services.Concretes.EmployeeManager>();
+
+
+builder.Services.AddScoped<IReservationService, ReservationService>();
 
 #endregion
 

@@ -19,5 +19,7 @@ namespace ServiceLayer.Services.Abstracts
         void CreateService(ServiceAddVM _serviceAddVM);
         void UpdateService(ServiceVM _serviceVM);
         List<ServiceVM> GetAllServices();
+        //Hairdresser Management
+        Task<HairdresserUpdateVM> GetHairdresserIdByUserAsync(string email);
     }
 }

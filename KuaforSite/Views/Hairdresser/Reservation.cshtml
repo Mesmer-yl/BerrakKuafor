@@ -1,0 +1,163 @@
+﻿@model EmployeeWithServiceVM
+@{
+    ViewData["Title"] = "Reservation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="hairdresser-title bg-soft-light"> @ViewBag.HairdresserName</h1>
+<div class="hairdresser-card bg-soft-light">
+    <h3>@Model.EmployeeName</h3>
+    <div class="row p-1">
+        <div class="col"><b>Hizmet</b></div>
+        <div class="col"><b>Süre</b></div>
+        <div class="col"><b>Ücret</b></div>
+    </div>
+    @foreach(var service in Model.Services)
+    {
+        <div class="row p-1">
+            <div class="col">
+                <input type="checkbox" name="serviceCheckBox" data-service-name="@service.Name"
+                data-duration="@service.Duration" data-money="@service.Money" />
+                @if (service.IsPro == true)
+                {
+                    <i class="text-decoration-underline"><b>*@service.Name</b></i>
+                }
+                else
+                {
+                    <i>@service.Name</i>
+                }
+            </div>
+            <div class="col">@service.Duration</div>
+            <div class="col">@service.Money ₺</div>
+        </div>
+    }
+</div>
+<div class="hairdresser-card  bg-soft-light">
+    <h3>Sepetiniz</h3>
+    <span><strong>Hizmetler : </strong><i id="selectedServices"></i></span>
+    <span><strong>İşlem Süresi : </strong><i id="totalDuration"></i></span>
+    <span><strong>Toplam Ücret : </strong><i id="totalMoney"></i></span>
+</div>
+<div class="hairdresser-card bg-soft-light">
+    <h3>Randevu Tarihi</h3>
+    <div class="form-group">
+        <span id="resultContext" class="d-block"></span>
+        <label class="form-label"><b>Tarih seçiniz</b></label>
+        <input id="checkEmployeeIdInput" type="hidden" value="@Model.EmployeeId" />
+        <input id="checkHairdresserIdInput" type="hidden" value="@ViewBag.HairdresserId" />
+        <input id="checkDateInput" type="datetime-local" class="form-control mb-2" />
+        <label class="form-label"><b>Saat seçiniz</b></label>
+        <input id="checkTimeInput" type="time" class="form-control mb-2" />
+        <button id="checkDateBtn" class="form-control btn bg-dark text-light">Onayla</button>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const checkboxes = document.querySelectorAll('input[name="serviceCheckBox"]');
+            const selectedServicesElement = document.getElementById("selectedServices");
+            const totalDurationElement = document.getElementById("totalDuration");
+            const totalMoneyElement = document.getElementById("totalMoney");
+
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener("change", updateSummary);
+            });
+
+            function updateSummary() {
+                let selectedServices = [];
+                let totalMoney = 0;
+                let totalDuration = 0;
+
+                checkboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        selectedServices.push(checkbox.dataset.serviceName);
+                        totalMoney += parseFloat(checkbox.dataset.money);
+
+                        const [hours, minutes, seconds] = checkbox.dataset.duration.split(':').map(Number);
+                        totalDuration += hours * 3600 + minutes * 60 + seconds;
+                    }
+                });
+
+                const hours = Math.floor(totalDuration / 3600);
+                const minutes = Math.floor((totalDuration % 3600) / 60);
+                const seconds = totalDuration % 60;
+                const formattedDuration = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+                selectedServicesElement.textContent = selectedServices.join(", ");
+                totalDurationElement.textContent = formattedDuration;
+                totalMoneyElement.textContent = totalMoney.toFixed(2) + " ₺";
+            }
+            const checkDateBtn = document.getElementById("checkDateBtn");
+
+            checkDateBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+
+                const selectedServices = document.getElementById("selectedServices").textContent.trim();
+                const totalMoney = parseInt(document.getElementById("totalMoney").textContent.trim(), 10);
+                const checkEmployeeIdInput = parseInt(document.getElementById("checkEmployeeIdInput").value.trim(), 10);
+                const checkHairdresserIdInput = parseInt(document.getElementById("checkHairdresserIdInput").value.trim(), 10); 
+                const checkDateInput = new Date(document.getElementById("checkDateInput").value);
+                const checkTimeInput = document.getElementById("checkTimeInput").value.trim(); 
+
+                if (!checkDateInput || !checkTimeInput) {
+                    alert("Lütfen tarih ve saat seçiniz.");
+                    return;
+                }
+
+                let totalDuration = 0;
+                document.querySelectorAll('input[name="serviceCheckBox"]:checked').forEach(input => {
+                    const durationStr = input.dataset.duration; 
+
+                    const parts = durationStr.split(':');
+                    const hours = parseInt(parts[0], 10) || 0;
+                    const minutes = parseInt(parts[1], 10) || 0;
+
+                    totalDuration += (hours * 60) + minutes;
+                });
+                let timeInput = 0;
+                const timeParts = checkTimeInput.split(':');
+                const timehours = parseInt(timeParts[0], 10) || 0;
+                const timeminutes = parseInt(timeParts[1], 10) || 0;
+                timeInput += (timehours * 60) + timeminutes; 
+                const fullDateTime = new Date(
+                    checkDateInput.getFullYear(),
+                    checkDateInput.getMonth(),
+                    checkDateInput.getDate(),
+                    parseInt(checkTimeInput.split(":")[0]),
+                    parseInt(checkTimeInput.split(":")[1])
+                );
+
+                $.ajax({
+                    url: '/Hairdresser/Reservation',
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({
+                        selectedServices: selectedServices,
+                        totalDuration: totalDuration,
+                        totalMoney: totalMoney,
+                        checkEmployeeId: checkEmployeeIdInput,
+                        checkHairdresserId: checkHairdresserIdInput,
+                        checkDate: fullDateTime.toISOString(),
+                        checkTime: timeInput 
+                    }),
+                    success: function (response) {
+                        document.getElementById("resultContext").innerText = response.message;
+                        document.getElementById("resultContext").className="d-block";
+                        document.getElementById("resultContext").classList.add("bg-info");
+                        document.getElementById("resultContext").classList.add("p-3");
+                    },
+                    error: function (error) {
+                        document.getElementById("resultContext").innerText = "Hata: " + error.responseText;
+                        document.getElementById("resultContext").className="d-block";
+                        document.getElementById("resultContext").classList.add("bg-danger");
+                        document.getElementById("resultContext").classList.add("p-3");
+                    }
+                });
+            });
+
+
+        });
+
+    </script>
+}

@@ -17,99 +17,129 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = KuaforSite
 build_property.RootNamespace = KuaforSite
-build_property.ProjectDir = C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 5 - Salon İşlemleri\KuaforSite\
+build_property.ProjectDir = C:\Users\me_ct\OneDrive\Masaüstü\OKTAY\Commit 10 - Kullanıcı Arayüz tasarımı\KuaforSite\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 5 - Salon İşlemleri\KuaforSite
+build_property.MSBuildProjectDirectory = C:\Users\me_ct\OneDrive\Masaüstü\OKTAY\Commit 10 - Kullanıcı Arayüz tasarımı\KuaforSite
 build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/Hairdressers/Index.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Hairdressers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcSGFpcmRyZXNzZXJzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/Hairdressers/NewHairdresser.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Hairdressers/NewHairdresser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcSGFpcmRyZXNzZXJzXE5ld0hhaXJkcmVzc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/Hairdressers/Services.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Hairdressers/Services.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcSGFpcmRyZXNzZXJzXFNlcnZpY2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/Hairdressers/UpdateHairdresser.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Hairdressers/UpdateHairdresser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcSGFpcmRyZXNzZXJzXFVwZGF0ZUhhaXJkcmVzc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/Home/Index.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/Shared/Error.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Management/Employees.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcTWFuYWdlbWVudFxFbXBsb3llZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Management/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcTWFuYWdlbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Management/Reservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcTWFuYWdlbWVudFxSZXNlcnZhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Management/Shifts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcTWFuYWdlbWVudFxTaGlmdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Management/UpdateEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcTWFuYWdlbWVudFxVcGRhdGVFbXBsb3llZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/UserOperations/NewUser.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/UserOperations/NewUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcVXNlck9wZXJhdGlvbnNcTmV3VXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/UserOperations/Roles.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/UserOperations/Roles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcVXNlck9wZXJhdGlvbnNcUm9sZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/UserOperations/UpdateUser.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/UserOperations/UpdateUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcVXNlck9wZXJhdGlvbnNcVXBkYXRlVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/UserOperations/Users.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/UserOperations/Users.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcVXNlck9wZXJhdGlvbnNcVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/_ViewImports.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Views/Authentication/SignIn.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/Authentication/SignIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cU2lnbkluLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Views/Authentication/SignUp.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/Authentication/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cU2lnblVwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Views/Home/Index.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/Hairdresser/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFpcmRyZXNzZXJcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/Hairdresser/Reservation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGFpcmRyZXNzZXJcUmVzZXJ2YXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Views/Shared/Error.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Views/_ViewImports.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/User/MyReservations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxNeVJlc2VydmF0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Views/_ViewStart.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Areas/Panel/Views/Shared/_Layout.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Areas/Panel/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcUGFuZWxcVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yuqmpbtzb2
 
-[C:/Users/oktay/Desktop/KUAFÖR OTOMASYONU/Commit 5 - Salon İşlemleri/KuaforSite/Views/Shared/_Layout.cshtml]
+[C:/Users/me_ct/OneDrive/Masaüstü/OKTAY/Commit 10 - Kullanıcı Arayüz tasarımı/KuaforSite/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-doshlnkez1

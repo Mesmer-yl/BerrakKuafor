@@ -1,6 +1,7 @@
 ﻿using EntityLayer.Concretes;
 using EntityLayer.ViewModels;
 using KuaforSite.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -8,6 +9,7 @@ using System.Data;
 
 namespace KuaforSite.Areas.Panel.Controllers
 {
+    [Authorize(Roles = "Admin")]
     [Area("Panel")]
     public class UserOperationsController : Controller
     {
@@ -117,7 +119,6 @@ namespace KuaforSite.Areas.Panel.Controllers
                 return RedirectToAction(nameof(UserOperationsController.UpdateUser),"UserOperations", new {userId = currentUser.Id});
             }
 
-            
             var roleList = await _roleManager.Roles.ToListAsync();
             _userUpdateByModVM.Roles = roleList.Select(role => new RoleItem
             {

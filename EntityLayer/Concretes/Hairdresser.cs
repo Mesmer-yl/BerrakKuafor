@@ -21,5 +21,9 @@ namespace EntityLayer.Concretes
         public string ManagerId { get; set; }
         [ForeignKey("ManagerId")]
         public AppUser AppUser { get; set; }
+
+
+        public ICollection<Employee> Employees { get; set; }
+        public ICollection<Reservation> Reservations { get; set; }
     }
 }

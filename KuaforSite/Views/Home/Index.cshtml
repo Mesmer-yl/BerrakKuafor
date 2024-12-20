@@ -1,8 +1,24 @@
-﻿@{
+﻿@model List<HairdressersModel>
+@{
     ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<div class="row">
+    @foreach (var hairdresser in Model)
+    {
+        @if (hairdresser.Hairdresser.Field == "Kadın") { ViewBag.border = "border-male"; ViewBag.text = "text-male"; ViewBag.bg = "bg-male"; } else { ViewBag.text = "text-female"; ViewBag.bg = "bg-female"; ViewBag.border = "border-female"; }
+        <div class="card bg-dark m-1 @ViewBag.border" style="width:22rem;">
+            <div class="card-body">
+                <h5 class="card-title txt-soft-light">@hairdresser.Hairdresser.Name</h5>
+                <h6 class="card-subtitle @ViewBag.text py-1">@hairdresser.Hairdresser.Field</h6>
+                <p class="card-text m-0 py-2 txt-soft-light"><b>Saatler : </b>@hairdresser.Hairdresser.OpenTime.ToString(@"hh\:mm") - @hairdresser.Hairdresser.CloseTime.ToString(@"hh\:mm")</p>
+                <p class="card-text m-0 py-2 txt-soft-light">
+                    <b>Hizmetler : </b>
+                    <i>@string.Join(", ", hairdresser.Services.Select(s => s.Name))</i>
+                </p>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+                <a asp-controller="Hairdresser" asp-action="Index" asp-route-hairdresserId="@hairdresser.Hairdresser.Id" class=" my-3 btn @ViewBag.border @ViewBag.text @ViewBag.bg">RandevuAl</a>
+            </div>
+        </div>
+    }
 </div>

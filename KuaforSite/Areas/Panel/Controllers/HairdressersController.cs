@@ -1,11 +1,13 @@
 ﻿using EntityLayer.Concretes;
 using EntityLayer.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using ServiceLayer.Services.Abstracts;
 
 namespace KuaforSite.Areas.Panel.Controllers
 {
+    [Authorize(Roles ="Admin")]
     [Area("Panel")]
     public class HairdressersController : Controller
     {
@@ -66,7 +68,6 @@ namespace KuaforSite.Areas.Panel.Controllers
             {
                 _hairdresserService.CreateService(_serviceAddVM);
                 var jsonDepartment = new { saveText = _serviceAddVM.Name+" hizmeti başarıyla eklendi" };
-               
                 Response.ContentType = "application/json";
                 return Json(jsonDepartment);
             }
@@ -83,7 +84,6 @@ namespace KuaforSite.Areas.Panel.Controllers
             {
                 _hairdresserService.UpdateService(_serviceVM);
                 var jsonDepartment = new { saveText = _serviceVM.Name + " hizmeti başarıyla güncellendi" };
-               
                 Response.ContentType = "application/json";
                 return Json(jsonDepartment);
             }

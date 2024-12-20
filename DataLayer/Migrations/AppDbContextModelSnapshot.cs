@@ -121,6 +121,62 @@ namespace DataLayer.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("EntityLayer.Concretes.Employee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("EmployeeId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("HairdresserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("HairdresserId");
+
+                    b.ToTable("Employees");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concretes.EmployeeService", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<TimeSpan>("Duration")
+                        .HasColumnType("time");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsPro")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Money")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("EmployeeServices");
+                });
+
             modelBuilder.Entity("EntityLayer.Concretes.Hairdresser", b =>
                 {
                     b.Property<int>("Id")
@@ -162,6 +218,57 @@ namespace DataLayer.Migrations
                     b.ToTable("Hairdressers");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concretes.Reservation", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("HairdresserId")
+                        .HasColumnType("int");
+
+                    b.Property<bool?>("IsStatus")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("Money")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Reason")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Services")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("HairdresserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Reservations");
+                });
+
             modelBuilder.Entity("EntityLayer.Concretes.Service", b =>
                 {
                     b.Property<int>("Id")
@@ -177,6 +284,33 @@ namespace DataLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Services");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concretes.Shift", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("DayOfWeek")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("int");
+
+                    b.Property<TimeSpan>("EndTime")
+                        .HasColumnType("time");
+
+                    b.Property<TimeSpan>("StartTime")
+                        .HasColumnType("time");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("Shifts");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -285,6 +419,44 @@ namespace DataLayer.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("EntityLayer.Concretes.Employee", b =>
+                {
+                    b.HasOne("EntityLayer.Concretes.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concretes.Hairdresser", "Hairdresser")
+                        .WithMany("Employees")
+                        .HasForeignKey("HairdresserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Hairdresser");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concretes.EmployeeService", b =>
+                {
+                    b.HasOne("EntityLayer.Concretes.Employee", "Employee")
+                        .WithMany("EmployeeServices")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concretes.Service", "Service")
+                        .WithMany("EmployeeServices")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Service");
+                });
+
             modelBuilder.Entity("EntityLayer.Concretes.Hairdresser", b =>
                 {
                     b.HasOne("EntityLayer.Concretes.AppUser", "AppUser")
@@ -294,6 +466,44 @@ namespace DataLayer.Migrations
                         .IsRequired();
 
                     b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concretes.Reservation", b =>
+                {
+                    b.HasOne("EntityLayer.Concretes.Employee", "Employee")
+                        .WithMany("Reservations")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concretes.Hairdresser", "Hairdresser")
+                        .WithMany("Reservations")
+                        .HasForeignKey("HairdresserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concretes.AppUser", "AppUser")
+                        .WithMany("Reservations")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Hairdresser");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concretes.Shift", b =>
+                {
+                    b.HasOne("EntityLayer.Concretes.Employee", "Employee")
+                        .WithMany("Shifts")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Employee");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -345,6 +555,32 @@ namespace DataLayer.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("EntityLayer.Concretes.AppUser", b =>
+                {
+                    b.Navigation("Reservations");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concretes.Employee", b =>
+                {
+                    b.Navigation("EmployeeServices");
+
+                    b.Navigation("Reservations");
+
+                    b.Navigation("Shifts");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concretes.Hairdresser", b =>
+                {
+                    b.Navigation("Employees");
+
+                    b.Navigation("Reservations");
+                });
+
+            modelBuilder.Entity("EntityLayer.Concretes.Service", b =>
+                {
+                    b.Navigation("EmployeeServices");
                 });
 #pragma warning restore 612, 618
         }
