@@ -35,7 +35,7 @@
             @foreach (var service in serviceList)
             {
                 var matchedEmployeeService = Model.FirstOrDefault(employeeService => employeeService.ServiceId == service.Id);
-                if (matchedEmployeeService != null) 
+                if (matchedEmployeeService != null)
                 {
                     <tr>
                         <td>
@@ -58,7 +58,7 @@
                         </td>
                     </tr>
                 }
-                else 
+                else
                 {
                     <tr>
                         <td>
@@ -88,9 +88,9 @@
     <script>
         $(document).ready(function () {
             function setEventListeners() {
-                var isProcessing = false;
+                var isProcessing = false; 
                 $('.addEmpSerBtn').on('click', function () {
-                    if (isProcessing) return;  
+                    if (isProcessing) return; 
 
                     isProcessing = true; 
                     var serviceId = $(this).data('id');
@@ -102,7 +102,7 @@
                     var isProInput = document.querySelector('input[name="' + inputIsPro + '"]:checked');
                     var money = parseInt(moneyInput.value);
                     var duration = durationInput.value;
-                    var durationParts = duration.split(':');
+                    var durationParts = duration.split(':'); 
                     var hours = parseInt(durationParts[0], 10);
                     var minutes = parseInt(durationParts[1], 10);
 
@@ -122,17 +122,17 @@
                         $.ajax({
                             url: "/Panel/Management/AddEmployeeService/",
                             type: "POST",
-                            data: JSON.stringify(addEmployeeServiceVM),
-                            contentType: "application/json; charset=utf-8",
+                            data: JSON.stringify(addEmployeeServiceVM), 
+                            contentType: "application/json; charset=utf-8", 
                             success: function (response) {
                                 alert(response.saveText);
-                                isProcessing = false; 
+                                isProcessing = false;
                                 window.location.replace("/Panel/Management/UpdateEmployee?employeeId=" + employeeId);
                             },
                             error: function (jqXHR, textStatus, errorThrown) {
                                 console.error("AJAX Error:", textStatus, errorThrown);
                                 alert("İşleminiz gerçekleşmedi: " + jqXHR.responseText);
-                                isProcessing = false;
+                                isProcessing = false; 
                             }
                         });
                     }
@@ -146,14 +146,14 @@
                     var inputIsProFalse = "isProFalse#" + serviceId;
                     var moneyInput = document.getElementById(inputMoney);
                     var durationInput = document.getElementById(inputDuration);
-                    var isProInput = document.querySelector('input[name="' + inputIsPro + '"]:checked');
+                    var isProInput = document.querySelector('input[name="' + inputIsPro + '"]:checked'); 
                     var money = parseInt(moneyInput.value);
                     var duration = durationInput.value;
-                    var durationParts = duration.split(':'); 
+                    var durationParts = duration.split(':');
                     var hours = parseInt(durationParts[0], 10);
                     var minutes = parseInt(durationParts[1], 10);
                     var formattedDuration = hours * 60 + minutes; 
-                    var isPro = isProInput ? isProInput.value === 'true' : false; 
+                    var isPro = isProInput ? isProInput.value === 'true' : false;
                     var employeeId = document.getElementById("employeeId").value;
 
                     var inputEmployeeServiceId = "employeeServiceId#" + serviceId;

@@ -20,6 +20,8 @@
 
   <ItemGroup>
     <Folder Include="Areas\Panel\Data\" />
+    <Folder Include="wwwroot\img\machinelearning\models\" />
+    <Folder Include="wwwroot\img\machinelearning\uploads\" />
   </ItemGroup>
 
 </Project>

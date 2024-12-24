@@ -10,7 +10,7 @@ namespace ServiceLayer.Services.Abstracts
 {
     public interface IEmployeeService
     {
-        Task CreateEmployee(EmployeeAddVM _employeeAddVM, int hairdresserId);
+        Task<bool> CreateEmployee(EmployeeAddVM _employeeAddVM, int hairdresserId);
         List<EmployeeVM> GetAllEmployeesWithUser(int hairdresserId);
         //EmployeService OP
         List<EmployeeServiceUpdateVM> GetAllEmployeeService(int employeeId);

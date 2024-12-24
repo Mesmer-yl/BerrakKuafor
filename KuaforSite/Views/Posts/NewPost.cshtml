@@ -1,0 +1,50 @@
+﻿@model PostAddModel
+@{
+    ViewData["Title"] = "NewPost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="form-area bg-dark col-lg-6 col-md-8 col-sm-12 mx-auto">
+
+    <h3>Yeni Gönderi</h3>
+    @if (TempData["PostMessage"] != null)
+    {
+        <div class="alert alert-info" role="alert">
+            @TempData["PostMessage"]
+        </div>
+    }
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger" role="alert">
+    </div>
+    <form class="form" method="post" asp-controller="Posts" asp-action="NewPost" enctype="multipart/form-data">
+
+        <input class="form-control" type="hidden" asp-for="UserName" value="@ViewBag.Username" />
+
+        <div class="form-group">
+            <label class="form-label" asp-for="HairdresserId" for="HairdresserId"></label>
+            <select asp-for="HairdresserId" asp-items="@ViewBag.Hairdressers" class="form-control">
+                <option value="">Lütfen bir kuaför seçin</option>
+            </select>
+            <span asp-validation-for="HairdresserId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="ImageUrl" for="ImageUrl"></label>
+            <input class="form-control" type="file" asp-for="ImageUrl" />
+            <span asp-validation-for="ImageUrl" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label" asp-for="Detail" for="Detail"></label>
+            <input class="form-control" type="text" asp-for="Detail" placeholder="Deneyiminiz hakkında bir şey söylemek ister misiniz?" />
+            <span asp-validation-for="Detail" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="form-control btn btn-primary">Paylaş</button>
+        </div>
+
+    </form>
+
+
+</div>
+

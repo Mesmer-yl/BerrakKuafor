@@ -17,5 +17,6 @@ namespace ServiceLayer.Services.Abstracts
         List<ReservationsForEmpVM> GetAllReservationsByEmployeeId(int employeeId);
         Task<List<ReservationsForUserVM>> GetAllReservationsByUserId(string userName);
         void ChangeReservationStatus(int reservationId, bool status, string? reason);
+        string GetStatusByEmployeeAndDate(int employeeId, DateTime date);
     }
 }

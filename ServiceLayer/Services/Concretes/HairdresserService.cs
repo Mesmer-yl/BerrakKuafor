@@ -28,6 +28,8 @@ namespace ServiceLayer.Services.Concretes
         {
             var manager = await _userManager.FindByEmailAsync(_hairdresserAddVM.ManagerMail);
             if(manager == null) return false;
+            var hairdressesr = _hairdresserRepo.GetByIdWithProps(x=>x.ManagerId==manager.Id);
+            if(hairdressesr != null) return false;
             var newHairdresser = new Hairdresser()
             {
                 Name = _hairdresserAddVM.Name,

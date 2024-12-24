@@ -11,7 +11,7 @@ using ServiceLayer.Services.Concretes;
 using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddHttpClient();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -46,6 +46,8 @@ builder.Services.AddScoped<IEmployeeService, ServiceLayer.Services.Concretes.Emp
 
 
 builder.Services.AddScoped<IReservationService, ReservationService>();
+builder.Services.AddScoped<IPostRepo, PostRepo>();
+builder.Services.AddScoped<IPostService, PostService>();
 
 #endregion
 

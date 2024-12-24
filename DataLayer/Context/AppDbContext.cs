@@ -28,7 +28,7 @@ namespace DataLayer.Context
             // Employee - Hairdresser ilişkisi
             modelBuilder.Entity<Employee>()
                 .HasOne(e => e.Hairdresser)
-                .WithMany(h => h.Employees)
+                .WithMany(h => h.Employees) 
                 .HasForeignKey(e => e.HairdresserId)
                 .OnDelete(DeleteBehavior.NoAction);
 
@@ -37,7 +37,8 @@ namespace DataLayer.Context
                 .HasOne(es => es.Employee)
                 .WithMany(e => e.EmployeeServices)
                 .HasForeignKey(es => es.EmployeeId)
-                .OnDelete(DeleteBehavior.Cascade); 
+                .OnDelete(DeleteBehavior.Cascade);
+
 
             // EmployeeService - Service ilişki konfigürasyonu
             modelBuilder.Entity<EmployeeService>()
@@ -56,9 +57,21 @@ namespace DataLayer.Context
             // Reservation -> Hairdresser ilişkisi
             modelBuilder.Entity<Reservation>()
                 .HasOne(r => r.Hairdresser)
-                .WithMany(h => h.Reservations) 
+                .WithMany(h => h.Reservations)
                 .HasForeignKey(r => r.HairdresserId)
                 .OnDelete(DeleteBehavior.NoAction);
+            // EmployeeService - Employee ilişki konfigürasyonu
+            modelBuilder.Entity<Post>()
+                .HasOne(es => es.AppUser)
+                .WithMany(e => e.Posts)
+                .HasForeignKey(es => es.UserId)
+                .OnDelete(DeleteBehavior.NoAction);
+            // EmployeeService - Employee ilişki konfigürasyonu
+            modelBuilder.Entity<Post>()
+                .HasOne(es => es.Hairdresser)
+                .WithMany(e => e.Posts)
+                .HasForeignKey(es => es.HairdresserId)
+                .OnDelete(DeleteBehavior.NoAction); 
 
         }
         public DbSet<Hairdresser> Hairdressers { get; set; }
@@ -67,5 +80,6 @@ namespace DataLayer.Context
         public DbSet<EmployeeService> EmployeeServices { get; set; }
         public DbSet<Shift> Shifts { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
+        public DbSet<Post> Posts { get; set; }
     }
 }

@@ -198,5 +198,31 @@ namespace ServiceLayer.Services.Concretes
             }
             return services;
         }
+
+        public string GetStatusByEmployeeAndDate(int employeeId, DateTime date)
+        {
+            var shift = _shiftRepo.GetByIdWithProps(x=>x.DayOfWeek==date.DayOfWeek && x.EmployeeId==employeeId);
+            var reservations = _reservationRepo.GetAllByCondition(r=>r.EmployeeId==employeeId && r.Date==date && (r.IsStatus==true || r.IsStatus==null));
+            
+            var shiftResult = $"Seçtiğiniz tarih için çalışanın mesai saatleri şöyledir =  \"Başlangıç\" -> {shift.StartTime} ve \"Bitiş\" -> {shift.EndTime}";
+            
+            if(reservations != null && reservations.Any())
+            {
+                int i = 1;
+                var reservationResult = "Seçilen tarih için çalışanımızın uygun olmadığı saat aralıkları şöyledir =  ";
+                foreach (var item in reservations)
+                {
+                    var txt = $" {item.StartTime} - {item.EndTime} ";
+                    if (reservations.Count() != i)
+                    {
+                        txt += " || ";
+                    }
+                    reservationResult += txt;
+                    i++;
+                }
+                shiftResult += " ... " + reservationResult;
+            }
+            return shiftResult;
+        }
     }
 }

@@ -54,8 +54,11 @@ namespace KuaforSite.Areas.Panel.Controllers
             try
             {
                 var updHairdresser = await _hairdresserService.GetHairdresserIdByUserAsync(_email);
-                await _employeeService.CreateEmployee(_employeeAddVM, updHairdresser.Id);
-                var jsonDepartment = new { saveText = _employeeAddVM.Email + " kullanıcı başarıyla çalışan olarak eklendi" };
+                var isOk = await _employeeService.CreateEmployee(_employeeAddVM, updHairdresser.Id);
+                var message = _employeeAddVM.Email+" kullanıcısı bulunamadı ya da zaten bir kuaförde çalışıyor!";
+                if (isOk) message = _employeeAddVM.Email + " kullanıcısı başarıyla çalışan olarak eklendi.";
+                var jsonDepartment = new { saveText = message };
+                // JSON formatında bir yanıt döndürmek
                 Response.ContentType = "application/json";
                 return Json(jsonDepartment);
             }
@@ -89,7 +92,6 @@ namespace KuaforSite.Areas.Panel.Controllers
                 };
                  _employeeService.CreateEmployeeService(addEmployeeServiceVM2);
                 var jsonDepartment = new { saveText = "Eklendi." };
-                // JSON formatında bir yanıt döndürmek
                 Response.ContentType = "application/json";
                 return Json(jsonDepartment);
             }

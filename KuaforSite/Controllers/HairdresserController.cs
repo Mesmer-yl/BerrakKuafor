@@ -4,6 +4,7 @@ using KuaforSite.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using ServiceLayer.Services.Abstracts;
 
 namespace KuaforSite.Controllers
@@ -49,7 +50,8 @@ namespace KuaforSite.Controllers
             model.CheckDate = model.CheckDate.Date;
             bool isOk = _reservationService.CheckReservation(model.CheckEmployeeId,model.CheckDate,model.CheckTime,model.TotalDuration);
             if (!isOk) {
-                var jsonError = new { message = "Seçtiğiniz saat aralığında başka bir randevu veya seçilen tarihte çalışmama durumu olabilir!"};
+                var resultMessage = _reservationService.GetStatusByEmployeeAndDate(model.CheckEmployeeId, model.CheckDate);
+                var jsonError = new { message = resultMessage };
                 return Json(jsonError);
             }
             var currentUser = await _userManager.FindByNameAsync(User.Identity!.Name!);

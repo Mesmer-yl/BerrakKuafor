@@ -29,7 +29,7 @@ namespace KuaforSite.Areas.Panel.Controllers
             var isSuccess = await _hairdresserService.CreateHairdresserAsync(_hairdresserAddVM);
             if(!isSuccess)
             {
-                TempData["HairdresserErrorMessage"] = "Belirtilen yönetici sistemimizde üye değildir!";
+                TempData["HairdresserErrorMessage"] = "Belirtilen yönetici sistemimizde üye değildir ya da zaten bir kuaförü yönetmektedir!";
                 return View();
             }
             TempData["HairdresserMessage"] = "Yeni kuaför başarıyla eklendi.";

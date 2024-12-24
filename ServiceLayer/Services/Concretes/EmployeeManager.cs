@@ -27,9 +27,18 @@ namespace ServiceLayer.Services.Concretes
             _shiftRepo = shiftRepo;
         }
 
-        public async Task CreateEmployee(EmployeeAddVM _employeeAddVM, int hairdresserId)
+        public async Task<bool> CreateEmployee(EmployeeAddVM _employeeAddVM, int hairdresserId)
         {
             var currentUser = await _userManager.FindByEmailAsync(_employeeAddVM.Email);
+            if (currentUser == null)
+            {
+                return false;
+            }
+            var checkEmployee = _employeeRepo.GetByIdWithProps(x => x.EmployeeId == currentUser.Id);
+            if (checkEmployee != null)
+            {
+                return false;
+            }
             var employee = new Employee()
             {
                 EmployeeId = currentUser.Id,
@@ -37,6 +46,7 @@ namespace ServiceLayer.Services.Concretes
             };
             _employeeRepo.Add(employee);
             _employeeRepo.Save();
+            return true;
         }
 
         public void CreateEmployeeService(EmployeeServiceAddVM _employeeServiceAddVM)

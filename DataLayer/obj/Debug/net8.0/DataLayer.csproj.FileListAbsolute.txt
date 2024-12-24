@@ -15,3 +15,20 @@ C:\Users\me_ct\OneDrive\Masaüstü\OKTAY\KuaforSite\DataLayer\obj\Debug\net8.0\r
 C:\Users\me_ct\OneDrive\Masaüstü\OKTAY\KuaforSite\DataLayer\obj\Debug\net8.0\DataLayer.pdb
 C:\Users\me_ct\OneDrive\Masaüstü\OKTAY\KuaforSite\DataLayer\obj\Debug\net8.0\DataLayer.genruntimeconfig.cache
 C:\Users\me_ct\OneDrive\Masaüstü\OKTAY\KuaforSite\DataLayer\obj\Debug\net8.0\ref\DataLayer.dll
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\bin\Debug\net8.0\DataLayer.deps.json
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\bin\Debug\net8.0\DataLayer.runtimeconfig.json
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\bin\Debug\net8.0\DataLayer.dll
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\bin\Debug\net8.0\DataLayer.pdb
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\bin\Debug\net8.0\EntityLayer.dll
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\bin\Debug\net8.0\EntityLayer.pdb
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\DataLayer.csproj.AssemblyReference.cache
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfoInputs.cache
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfo.cs
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\DataLayer.csproj.Up2Date
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\DataLayer.dll
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\refint\DataLayer.dll
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\DataLayer.pdb
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\DataLayer.genruntimeconfig.cache
+C:\Users\oktay\Desktop\KUAFÖR OTOMASYONU\Commit 11 - Api, Gönderiler\DataLayer\obj\Debug\net8.0\ref\DataLayer.dll

@@ -218,6 +218,41 @@ namespace DataLayer.Migrations
                     b.ToTable("Hairdressers");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concretes.Post", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CurrentTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Detail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("HairdresserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("HairdresserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Posts");
+                });
+
             modelBuilder.Entity("EntityLayer.Concretes.Reservation", b =>
                 {
                     b.Property<int>("Id")
@@ -468,6 +503,25 @@ namespace DataLayer.Migrations
                     b.Navigation("AppUser");
                 });
 
+            modelBuilder.Entity("EntityLayer.Concretes.Post", b =>
+                {
+                    b.HasOne("EntityLayer.Concretes.Hairdresser", "Hairdresser")
+                        .WithMany("Posts")
+                        .HasForeignKey("HairdresserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("EntityLayer.Concretes.AppUser", "AppUser")
+                        .WithMany("Posts")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Hairdresser");
+                });
+
             modelBuilder.Entity("EntityLayer.Concretes.Reservation", b =>
                 {
                     b.HasOne("EntityLayer.Concretes.Employee", "Employee")
@@ -559,6 +613,8 @@ namespace DataLayer.Migrations
 
             modelBuilder.Entity("EntityLayer.Concretes.AppUser", b =>
                 {
+                    b.Navigation("Posts");
+
                     b.Navigation("Reservations");
                 });
 
@@ -574,6 +630,8 @@ namespace DataLayer.Migrations
             modelBuilder.Entity("EntityLayer.Concretes.Hairdresser", b =>
                 {
                     b.Navigation("Employees");
+
+                    b.Navigation("Posts");
 
                     b.Navigation("Reservations");
                 });

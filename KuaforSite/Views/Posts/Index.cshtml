@@ -1,0 +1,46 @@
+﻿@model List<PostVM>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>
+    Gönderiler
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a class="btn btn-succes float-end" asp-controller="Posts" asp-action="NewPost">Yeni Gönderi</a>
+    }
+</h1>
+@if (ViewData["GetPostMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewData["GetPostMessage"]
+    </div>
+}
+<form method="get" action="/Posts/Index">
+    <select class="form-control" name="selectedHairdresser">
+        <option value="0">Lütfen bir kuaför seçin</option>
+        @foreach (var hairdresser in ViewBag.Hairdressers)
+        {
+            <option value="@hairdresser.Value">@hairdresser.Text</option>
+        }
+    </select>
+    <button type="submit">Ara</button>
+</form>
+@if(Model != null && Model.Any()){
+    foreach (var post in Model)
+    {
+        <div class="post-card">
+            <span class="title">@post.NameSurname</span>
+            <span class="subtitle">@post.HairdresserName</span>
+            <span class="date">@post.CurrentTime.ToShortDateString() - @post.CurrentTime.ToShortTimeString()</span>
+            <div class="photo">
+                <img src="@post.ImageUrl" alt="post_image-@post.HairdresserName-@post.NameSurname" />
+            </div>
+            <span class="detail">@post.Detail</span>
+        </div>
+    }
+}else{
+    <span>Henüz bir gönderi paylaşılmamış.</span>
+}
+
