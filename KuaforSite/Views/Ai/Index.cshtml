@@ -1,0 +1,176 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="bg-dark text-light p-4">Yapay Zeka Aracımızı Deneyin!</h3>
+<div id="myDiv"></div>
+@if(ViewBag.Gender == null){
+    <div class="ai-card">
+        <h4>Cinsiyetini seçerek başla </h4>
+        <div>
+            <a class="btn btn-outline-primary" asp-controller="Ai" asp-action="Index" asp-route-gender="Erkek">Erkek</a>
+            <a class="btn btn-outline-danger" asp-controller="Ai" asp-action="Index" asp-route-gender="Kadın">Kadın</a>
+        </div>
+    </div>
+}
+@if(ViewBag.Gender == "Kadın"){
+    <div id="question-1" class="ai-card">
+        <h4>Saç modeli belirlerken yüz tipi çok önemlidir</h4>
+        <div class="d-flex">
+            <div class="ai-card-img">
+                <img src="~/img/yuz.jpg" >
+            </div>
+            <div class="options">
+                <div class="ai-answer" data-answer="Elmas" onclick="selectAnswer(1, 'Elmas')">Elmas Yüz Tipi</div>
+                <div class="ai-answer" data-answer="Kalp" onclick="selectAnswer(1, 'Kalp')">Kalp Yüz Tipi</div>
+                <div class="ai-answer" data-answer="Oval" onclick="selectAnswer(1, 'Oval')">Oval Yüz Tipi</div>
+                <div class="ai-answer" data-answer="Yuvarlak" onclick="selectAnswer(1, 'Yuvarlak')">Yuvarlak Yüz Tipi</div>
+                <div class="ai-answer" data-answer="Kare" onclick="selectAnswer(1, 'Kare')">Kare Yüz Tipi</div>
+                <div class="ai-answer" data-answer="Ucgen" onclick="selectAnswer(1, 'Ucgen')">Üçgen Yüz Tipi</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="question-2" class="ai-card" style="display:none;">
+        <h4>Şimdi de alın genişliğini öğrenelim</h4>
+        <div class="d-flex">
+            <div class="ai-card-img">
+                <img src="~/img/alin.png" >
+            </div>
+            <div class="options">
+                <div class="ai-answer" data-answer="Dar" onclick="selectAnswer(2, 'Dar')">Dar Alın</div>
+                <div class="ai-answer" data-answer="Normal" onclick="selectAnswer(2, 'Normal')">Normal Alın</div>
+                <div class="ai-answer" data-answer="Genis" onclick="selectAnswer(2, 'Genis')">Geniş Alın</div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-danger" onclick="goBack()">Geri</button>
+    </div>
+
+    <div id="question-3" class="ai-card" style="display:none;">
+        <h3>Saç tipin doğru modeli bulmamıza yardım olacak</h3>
+        <div class="options">
+            <img src="~/img/female/kivirciksac.png" alt="kivirciksac" data-answer="kivircik" onclick="selectAnswer(3, 'kivircik')">
+            <img src="~/img/female/dalgalisac.png" alt="dalgalisac" data-answer="dalgali" onclick="selectAnswer(3, 'dalgali')">
+            <img src="~/img/female/duzsac.png" alt="duzsac" data-answer="duz" onclick="selectAnswer(3, 'duz')">
+        </div>
+        <button type="button" class="btn btn-danger" onclick="goBack()">Geri</button>
+    </div>
+    <div id="question-4" class="ai-card" style="display:none;">
+        <h3>Tercih ettiğin saç uzunluğunu söyle ve öneriyi al</h3>
+        <div class="options">
+            <img src="~/img/female/kisasac.png" alt="kisasac" data-answer="kisa" onclick="selectAnswer(4, 'kisa')">
+            <img src="~/img/female/ortasac.png" alt="ortasac" data-answer="orta" onclick="selectAnswer(4, 'orta')">
+            <img src="~/img/female/uzunsac.png" alt="uzunsac" data-answer="uzun" onclick="selectAnswer(4, 'uzun')">
+        </div>
+        <button type="button" class="btn btn-danger" onclick="goBack()">Geri</button>
+        <button type="button" class="btn btn-primary" onclick="submitAnswers()">Tamamla</button>
+    </div>
+}
+@if (ViewBag.Gender == "Erkek")
+{
+    <div id="question-1" class="ai-card">
+        <h4>Saç modeli belirlerken yüz tipi çok önemlidir</h4>
+        <div class="d-flex">
+            <div class="ai-card-img">
+                <img src="~/img/yuz.jpg">
+            </div>
+            <div class="options">
+                <div class="ai-answer" data-answer="Elmas" onclick="selectAnswer(1, 'Elmas')">Elmas Yüz Tipi</div>
+                <div class="ai-answer" data-answer="Kalp" onclick="selectAnswer(1, 'Kalp')">Kalp Yüz Tipi</div>
+                <div class="ai-answer" data-answer="Oval" onclick="selectAnswer(1, 'Oval')">Oval Yüz Tipi</div>
+                <div class="ai-answer" data-answer="Yuvarlak" onclick="selectAnswer(1, 'Yuvarlak')">Yuvarlak Yüz Tipi</div>
+                <div class="ai-answer" data-answer="Kare" onclick="selectAnswer(1, 'Kare')">Kare Yüz Tipi</div>
+                <div class="ai-answer" data-answer="Ucgen" onclick="selectAnswer(1, 'Ucgen')">Üçgen Yüz Tipi</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="question-2" class="ai-card" style="display:none;">
+        <h4>Şimdi de alın genişliğini öğrenelim</h4>
+        <div class="d-flex">
+            <div class="ai-card-img">
+                <img src="~/img/alin.png">
+            </div>
+            <div class="options">
+                <div class="ai-answer" data-answer="Dar" onclick="selectAnswer(2, 'Dar')">Dar Alın</div>
+                <div class="ai-answer" data-answer="Normal" onclick="selectAnswer(2, 'Normal')">Normal Alın</div>
+                <div class="ai-answer" data-answer="Genis" onclick="selectAnswer(2, 'Genis')">Geniş Alın</div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-danger" onclick="goBack()">Geri</button>
+    </div>
+
+    <div id="question-3" class="ai-card" style="display:none;">
+        <h3>Saç tipin doğru modeli bulmamıza yardım olacak</h3>
+        <div class="options">
+            <img src="~/img/male/kivirciksac.png" alt="kivirciksac" data-answer="kivircik" onclick="selectAnswer(3, 'kivircik')">
+            <img src="~/img/male/dalgalisac.png" alt="dalgalisac" data-answer="dalgali" onclick="selectAnswer(3, 'dalgali')">
+            <img src="~/img/male/duzsac.png" alt="duzsac" data-answer="duz" onclick="selectAnswer(3, 'duz')">
+        </div>
+        <button type="button" class="btn btn-danger" onclick="goBack()">Geri</button>
+    </div>
+    <div id="question-4" class="ai-card" style="display:none;">
+        <h3>Tercih ettiğin saç uzunluğunu söyle ve öneriyi al @TempData["ResponseHtml"]</h3>
+        <div class="options">
+            <img src="~/img/male/kisasac.png" alt="kisasac" data-answer="kisa" onclick="selectAnswer(4, 'kisa')">
+            <img src="~/img/male/ortasac.png" alt="ortasac" data-answer="orta" onclick="selectAnswer(4, 'orta')">
+            <img src="~/img/male/uzunsac.png" alt="uzunsac" data-answer="uzun" onclick="selectAnswer(4, 'uzun')">
+        </div>
+        <button type="button" class="btn btn-danger" onclick="goBack()">Geri</button>
+        <button type="button" class="btn btn-primary" onclick="submitAnswers()">Tamamla</button>
+    </div>
+}
+
+
+@section Scripts {
+    <script>
+        const answers = {};
+        let currentQuestion = 1;
+
+        function selectAnswer(questionId, answer) {
+            // Cevabı kaydet
+            answers[`answer${questionId}`] = answer;
+
+            if(questionId!=4){
+                // Bir sonraki soruya geç
+                const nextQuestionId = questionId + 1;
+                document.querySelectorAll('.ai-card').forEach(q => q.style.display = 'none');
+
+                if (document.getElementById('question-' + nextQuestionId)) {
+                    document.getElementById('question-' + nextQuestionId).style.display = 'block';
+                    currentQuestion = nextQuestionId;
+                } else {
+                    console.log('Tüm cevaplar seçildi:', answers);
+                }
+            }
+        }
+        function goBack() {
+            if (currentQuestion > 1) {
+                document.querySelector(`#question-${currentQuestion}`).style.display = 'none';
+                currentQuestion -= 1;
+                document.querySelector(`#question-${currentQuestion}`).style.display = 'block';
+            }
+        }
+        function submitAnswers() {
+            console.log('Gönderilecek cevaplar:', answers);
+
+            $.ajax({
+                url: '/Ai/Index',
+                type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify(answers),
+                success: function(response) {
+                    // Dönen HTML verisini belirli bir div'e ekle
+                    $('#myDiv').html(response);
+                },
+                error: function (error) {
+                    console.error('Hata:', error);
+                    alert('Cevaplar gönderilemedi.');
+                }
+            });
+        }
+
+    </script>
+}

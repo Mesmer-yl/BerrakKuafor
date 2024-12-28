@@ -4,13 +4,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>
+<h3 class="bg-dark text-light p-4">
     Gönderiler
     @if (User.Identity.IsAuthenticated)
     {
-        <a class="btn btn-succes float-end" asp-controller="Posts" asp-action="NewPost">Yeni Gönderi</a>
+        <a class="btn btn-outline-warning float-end" asp-controller="Posts" asp-action="NewPost">Yeni Gönderi</a>
     }
-</h1>
+</h3>
 @if (ViewData["GetPostMessage"] != null)
 {
     <div class="alert alert-danger" role="alert">
@@ -25,19 +25,21 @@
             <option value="@hairdresser.Value">@hairdresser.Text</option>
         }
     </select>
-    <button type="submit">Ara</button>
+    <button type="submit" class="btn btn-info d-block">Ara</button>
 </form>
 @if(Model != null && Model.Any()){
     foreach (var post in Model)
     {
         <div class="post-card">
-            <span class="title">@post.NameSurname</span>
-            <span class="subtitle">@post.HairdresserName</span>
-            <span class="date">@post.CurrentTime.ToShortDateString() - @post.CurrentTime.ToShortTimeString()</span>
-            <div class="photo">
-                <img src="@post.ImageUrl" alt="post_image-@post.HairdresserName-@post.NameSurname" />
+            <div class="postcard">
+                <span class="title text-light"><b>@post.NameSurname</b></span>
+                <span class="subtitle text-light"><b>@post.HairdresserName</b></span>
+                <span class="date text-light"><b>@post.CurrentTime.ToShortDateString() - @post.CurrentTime.ToShortTimeString()</b></span>
+                <div class="photo mt-2">
+                    <img src="@post.ImageUrl" alt="post_image-@post.HairdresserName-@post.NameSurname" />
+                </div>
+                <span class="detail py-2 text-light d-block">@post.Detail</span>
             </div>
-            <span class="detail">@post.Detail</span>
         </div>
     }
 }else{

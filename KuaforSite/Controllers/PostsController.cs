@@ -1,6 +1,7 @@
 ﻿using Azure;
 using EntityLayer.ViewModels;
 using KuaforSite.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.IdentityModel.Tokens;
@@ -72,6 +73,7 @@ namespace KuaforSite.Controllers
             ViewData["GetPostMessage"] = "Api hata verdi!";
             return View(new List<PostVM>());
         }
+        [Authorize]
         [HttpGet]
         public async Task<IActionResult> NewPost()
         {
@@ -100,6 +102,7 @@ namespace KuaforSite.Controllers
             }
             return View();
         }
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> NewPost(PostAddModel post)
         {

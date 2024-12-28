@@ -92,7 +92,7 @@
     "ContainingType": "KuaforSite.Controllers.PostController",
     "Method": "UpdatePost",
     "RelativePath": "api/Post/UpdatePost",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [

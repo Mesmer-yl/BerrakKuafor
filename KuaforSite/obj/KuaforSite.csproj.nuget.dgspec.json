@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\KuaforSite\\KuaforSite.csproj": {}
+    "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\KuaforSite\\KuaforSite.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\DataLayer\\obj\\",
+        "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\me_ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\me_ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,15 +26,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\EntityLayer\\EntityLayer.csproj": {
-                "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\EntityLayer\\EntityLayer.csproj"
+              "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\EntityLayer\\EntityLayer.csproj": {
+                "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\EntityLayer\\EntityLayer.csproj"
               }
             }
           }
@@ -44,7 +47,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -85,21 +89,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\EntityLayer\\EntityLayer.csproj": {
+    "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\EntityLayer\\EntityLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\EntityLayer\\EntityLayer.csproj",
+        "projectUniqueName": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\EntityLayer\\EntityLayer.csproj",
         "projectName": "EntityLayer",
-        "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\EntityLayer\\EntityLayer.csproj",
-        "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\EntityLayer\\obj\\",
+        "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\EntityLayer\\EntityLayer.csproj",
+        "packagesPath": "C:\\Users\\me_ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\EntityLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\me_ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,7 +115,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -125,7 +132,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -156,21 +164,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\KuaforSite\\KuaforSite.csproj": {
+    "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\KuaforSite\\KuaforSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\KuaforSite\\KuaforSite.csproj",
+        "projectUniqueName": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\KuaforSite\\KuaforSite.csproj",
         "projectName": "KuaforSite",
-        "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\KuaforSite\\KuaforSite.csproj",
-        "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\KuaforSite\\obj\\",
+        "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\KuaforSite\\KuaforSite.csproj",
+        "packagesPath": "C:\\Users\\me_ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\KuaforSite\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\me_ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -178,15 +190,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\ServiceLayer\\ServiceLayer.csproj": {
-                "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\ServiceLayer\\ServiceLayer.csproj"
+              "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\ServiceLayer\\ServiceLayer.csproj": {
+                "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\ServiceLayer\\ServiceLayer.csproj"
               }
             }
           }
@@ -200,7 +211,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -215,6 +227,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "OpenAI": {
+              "target": "Package",
+              "version": "[2.1.0, )"
             }
           },
           "imports": [
@@ -236,21 +252,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\ServiceLayer\\ServiceLayer.csproj": {
+    "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\ServiceLayer\\ServiceLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\ServiceLayer\\ServiceLayer.csproj",
+        "projectUniqueName": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\ServiceLayer\\ServiceLayer.csproj",
         "projectName": "ServiceLayer",
-        "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\ServiceLayer\\ServiceLayer.csproj",
-        "packagesPath": "C:\\Users\\oktay\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\ServiceLayer\\obj\\",
+        "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\ServiceLayer\\ServiceLayer.csproj",
+        "packagesPath": "C:\\Users\\me_ct\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\ServiceLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\oktay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\me_ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -258,15 +278,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\oktay\\Desktop\\KUAFÖR OTOMASYONU\\Commit 11 - Api, Gönderiler\\DataLayer\\DataLayer.csproj"
+              "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "C:\\Users\\me_ct\\OneDrive\\Masaüstü\\PROJELER\\OKTAY\\KuaforSite\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -280,7 +299,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -301,7 +321,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
